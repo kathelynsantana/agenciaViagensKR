@@ -29,3 +29,4 @@ C:\Users\kathelyn.csantana\Documents\Agência de Viagens KR\Visual Studio\Agenci
 C:\Users\kathelyn.csantana\Documents\Agência de Viagens KR\Visual Studio\AgenciaViagensKR\AgenciaViagensKR\obj\Debug\net8.0-windows\AgenciaViagensKR.pdb
 C:\Users\kathelyn.csantana\Documents\Agência de Viagens KR\Visual Studio\AgenciaViagensKR\AgenciaViagensKR\obj\Debug\net8.0-windows\AgenciaViagensKR.genruntimeconfig.cache
 C:\Users\kathelyn.csantana\Documents\Agência de Viagens KR\Visual Studio\AgenciaViagensKR\AgenciaViagensKR\obj\Debug\net8.0-windows\ref\AgenciaViagensKR.dll
+C:\Users\kathelyn.csantana\Documents\Agência de Viagens KR\Visual Studio\AgenciaViagensKR\AgenciaViagensKR\obj\Debug\net8.0-windows\AgenciaViagensKR.sourcelink.json

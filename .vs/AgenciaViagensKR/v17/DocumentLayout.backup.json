@@ -3,12 +3,20 @@
   "WorkspaceRootPath": "C:\\Users\\kathelyn.csantana\\Documents\\Ag\u00EAncia de Viagens KR\\Visual Studio\\AgenciaViagensKR\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{7AB69679-C4C0-4E00-B226-58CAF0D6BA17}|AgenciaViagensKR\\AgenciaViagensKR.csproj|c:\\users\\kathelyn.csantana\\documents\\ag\u00EAncia de viagens kr\\visual studio\\agenciaviagenskr\\agenciaviagenskr\\daocliente.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7AB69679-C4C0-4E00-B226-58CAF0D6BA17}|AgenciaViagensKR\\AgenciaViagensKR.csproj|solutionrelative:agenciaviagenskr\\daocliente.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{7AB69679-C4C0-4E00-B226-58CAF0D6BA17}|AgenciaViagensKR\\AgenciaViagensKR.csproj|c:\\users\\kathelyn.csantana\\documents\\ag\u00EAncia de viagens kr\\visual studio\\agenciaviagenskr\\agenciaviagenskr\\daoform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{7AB69679-C4C0-4E00-B226-58CAF0D6BA17}|AgenciaViagensKR\\AgenciaViagensKR.csproj|solutionrelative:agenciaviagenskr\\daoform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{7AB69679-C4C0-4E00-B226-58CAF0D6BA17}|AgenciaViagensKR\\AgenciaViagensKR.csproj|c:\\users\\kathelyn.csantana\\documents\\ag\u00EAncia de viagens kr\\visual studio\\agenciaviagenskr\\agenciaviagenskr\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "AbsoluteMoniker": "D:0:0:{7AB69679-C4C0-4E00-B226-58CAF0D6BA17}|AgenciaViagensKR\\AgenciaViagensKR.csproj|C:\\Users\\kathelyn.csantana\\Documents\\Ag\u00EAncia de Viagens KR\\Visual Studio\\AgenciaViagensKR\\agenciaviagenskr\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{7AB69679-C4C0-4E00-B226-58CAF0D6BA17}|AgenciaViagensKR\\AgenciaViagensKR.csproj|solutionrelative:agenciaviagenskr\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7AB69679-C4C0-4E00-B226-58CAF0D6BA17}|AgenciaViagensKR\\AgenciaViagensKR.csproj|c:\\users\\kathelyn.csantana\\documents\\ag\u00EAncia de viagens kr\\visual studio\\agenciaviagenskr\\agenciaviagenskr\\daoagente.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7AB69679-C4C0-4E00-B226-58CAF0D6BA17}|AgenciaViagensKR\\AgenciaViagensKR.csproj|solutionrelative:agenciaviagenskr\\daoagente.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -18,11 +26,11 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 2,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "Form1.cs [Projeto]",
               "DocumentMoniker": "C:\\Users\\kathelyn.csantana\\Documents\\Ag\u00EAncia de Viagens KR\\Visual Studio\\AgenciaViagensKR\\AgenciaViagensKR\\Form1.cs",
               "RelativeDocumentMoniker": "AgenciaViagensKR\\Form1.cs",
@@ -34,16 +42,41 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "DAOForm.cs",
               "DocumentMoniker": "C:\\Users\\kathelyn.csantana\\Documents\\Ag\u00EAncia de Viagens KR\\Visual Studio\\AgenciaViagensKR\\AgenciaViagensKR\\DAOForm.cs",
               "RelativeDocumentMoniker": "AgenciaViagensKR\\DAOForm.cs",
               "ToolTip": "C:\\Users\\kathelyn.csantana\\Documents\\Ag\u00EAncia de Viagens KR\\Visual Studio\\AgenciaViagensKR\\AgenciaViagensKR\\DAOForm.cs",
               "RelativeToolTip": "AgenciaViagensKR\\DAOForm.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABoAAAA3AAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAcAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-04-28T19:06:52.509Z",
               "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "DAOCliente.cs",
+              "DocumentMoniker": "C:\\Users\\kathelyn.csantana\\Documents\\Ag\u00EAncia de Viagens KR\\Visual Studio\\AgenciaViagensKR\\AgenciaViagensKR\\DAOCliente.cs",
+              "RelativeDocumentMoniker": "AgenciaViagensKR\\DAOCliente.cs",
+              "ToolTip": "C:\\Users\\kathelyn.csantana\\Documents\\Ag\u00EAncia de Viagens KR\\Visual Studio\\AgenciaViagensKR\\AgenciaViagensKR\\DAOCliente.cs",
+              "RelativeToolTip": "AgenciaViagensKR\\DAOCliente.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAHsAAAA1AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-28T19:23:17.886Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "DAOAgente.cs",
+              "DocumentMoniker": "C:\\Users\\kathelyn.csantana\\Documents\\Ag\u00EAncia de Viagens KR\\Visual Studio\\AgenciaViagensKR\\AgenciaViagensKR\\DAOAgente.cs",
+              "RelativeDocumentMoniker": "AgenciaViagensKR\\DAOAgente.cs",
+              "ToolTip": "C:\\Users\\kathelyn.csantana\\Documents\\Ag\u00EAncia de Viagens KR\\Visual Studio\\AgenciaViagensKR\\AgenciaViagensKR\\DAOAgente.cs",
+              "RelativeToolTip": "AgenciaViagensKR\\DAOAgente.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-28T19:23:31.512Z"
             }
           ]
         }
