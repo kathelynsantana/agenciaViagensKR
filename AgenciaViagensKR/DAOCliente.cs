@@ -31,7 +31,7 @@ namespace AgenciaViagensKR
         public int[] telefone;
         public string[] historico;
 
-        //Cadastrar um novo cliente
+        //Cadastrar
         public void cadastrarCliente(int codigo, string nome, double cpf, DateTime dataNascimento, string email, string senha, int telefone, string historico)
         {
             try
@@ -48,9 +48,10 @@ namespace AgenciaViagensKR
             }
             catch (Exception erro)
             {
-                Console.WriteLine($"Erro! Algo falhou na inserção de dados e no cadastro, tente novamente.\n\n {erro}");
-            }//Fim do catch
-        }//Fim do Cadastrar Cliente
+                //Erro no cadastro
+                Console.WriteLine($"Erro! Algo falhou na inserção de dados e no cadastro, tente novamente.");
+            }//Fim do try_catch
+        }//Fim do Cadastrar
 
         //Consultar
         //Login
@@ -92,19 +93,20 @@ namespace AgenciaViagensKR
             try
             {
                 //Configurando a atualização...
-                string query = $"update autor set {campo} = '{novoDado}' where codigo = '{codigo}'";
+                string query = $"update cliente set {campo} = '{novoDado}' where codigo = '{codigo}'";
 
                 //Executando o comando de atualização...
                 MySqlCommand sql = new MySqlCommand(query, this.conexao);
                 string resultado = "" + sql.ExecuteNonQuery();//Executando o comando
-                return $"Atualizado com sucesso!";
+                return $"Os dados foram tualizados com sucesso!";
             }
             catch
             {
                 //Erro na atualização
                 return $"Algo deu errado na atualização!";
-            }
-        }
+            }//Fim do try_catch
+        }//Fim do Atualizar
+
         //Excluir
         public string excluirCliente(int codigo)
         {
@@ -120,7 +122,7 @@ namespace AgenciaViagensKR
             }
             catch (Exception erro)
             {
-                //Erro no excluir
+                //Erro na exclusão
                 return $"Algo deu errado na exclusão!";
             }//Fim do try_catch
         }//Fim do Excluir

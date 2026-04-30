@@ -1,7 +1,28 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="Current" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
+    <Compile Update="AgenteViagens.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="AtualizarAge.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="CadastrarAge.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Cliente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="ConsultarAge.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="ExcluirAge.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="LoginAge.cs">
       <SubType>Form</SubType>
     </Compile>
   </ItemGroup>

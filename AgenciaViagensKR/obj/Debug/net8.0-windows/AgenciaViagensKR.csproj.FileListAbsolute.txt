@@ -17,7 +17,6 @@ C:\Users\kathelyn.csantana\Documents\Agência de Viagens KR\Visual Studio\Agenci
 C:\Users\kathelyn.csantana\Documents\Agência de Viagens KR\Visual Studio\AgenciaViagensKR\AgenciaViagensKR\bin\Debug\net8.0-windows\runtimes\win-x64\native\krb5_64.dll
 C:\Users\kathelyn.csantana\Documents\Agência de Viagens KR\Visual Studio\AgenciaViagensKR\AgenciaViagensKR\bin\Debug\net8.0-windows\runtimes\win-x64\native\krbcc64.dll
 C:\Users\kathelyn.csantana\Documents\Agência de Viagens KR\Visual Studio\AgenciaViagensKR\AgenciaViagensKR\obj\Debug\net8.0-windows\AgenciaViagensKR.csproj.AssemblyReference.cache
-C:\Users\kathelyn.csantana\Documents\Agência de Viagens KR\Visual Studio\AgenciaViagensKR\AgenciaViagensKR\obj\Debug\net8.0-windows\AgenciaViagensKR.Form1.resources
 C:\Users\kathelyn.csantana\Documents\Agência de Viagens KR\Visual Studio\AgenciaViagensKR\AgenciaViagensKR\obj\Debug\net8.0-windows\AgenciaViagensKR.csproj.GenerateResource.cache
 C:\Users\kathelyn.csantana\Documents\Agência de Viagens KR\Visual Studio\AgenciaViagensKR\AgenciaViagensKR\obj\Debug\net8.0-windows\AgenciaViagensKR.GeneratedMSBuildEditorConfig.editorconfig
 C:\Users\kathelyn.csantana\Documents\Agência de Viagens KR\Visual Studio\AgenciaViagensKR\AgenciaViagensKR\obj\Debug\net8.0-windows\AgenciaViagensKR.AssemblyInfoInputs.cache
@@ -30,3 +29,12 @@ C:\Users\kathelyn.csantana\Documents\Agência de Viagens KR\Visual Studio\Agenci
 C:\Users\kathelyn.csantana\Documents\Agência de Viagens KR\Visual Studio\AgenciaViagensKR\AgenciaViagensKR\obj\Debug\net8.0-windows\AgenciaViagensKR.genruntimeconfig.cache
 C:\Users\kathelyn.csantana\Documents\Agência de Viagens KR\Visual Studio\AgenciaViagensKR\AgenciaViagensKR\obj\Debug\net8.0-windows\ref\AgenciaViagensKR.dll
 C:\Users\kathelyn.csantana\Documents\Agência de Viagens KR\Visual Studio\AgenciaViagensKR\AgenciaViagensKR\obj\Debug\net8.0-windows\AgenciaViagensKR.sourcelink.json
+C:\Users\kathelyn.csantana\Documents\Agência de Viagens KR\Visual Studio\AgenciaViagensKR\AgenciaViagensKR\obj\Debug\net8.0-windows\AgenciaViagensKR.Homepage.resources
+C:\Users\kathelyn.csantana\Documents\Agência de Viagens KR\Visual Studio\AgenciaViagensKR\AgenciaViagensKR\obj\Debug\net8.0-windows\AgenciaViagensKR.Properties.Resources.resources
+C:\Users\kathelyn.csantana\Documents\Agência de Viagens KR\Visual Studio\AgenciaViagensKR\AgenciaViagensKR\obj\Debug\net8.0-windows\AgenciaViagensKR.AgenteViagens.resources
+C:\Users\kathelyn.csantana\Documents\Agência de Viagens KR\Visual Studio\AgenciaViagensKR\AgenciaViagensKR\obj\Debug\net8.0-windows\AgenciaViagensKR.Cliente.resources
+C:\Users\kathelyn.csantana\Documents\Agência de Viagens KR\Visual Studio\AgenciaViagensKR\AgenciaViagensKR\obj\Debug\net8.0-windows\AgenciaViagensKR.AtualizarAge.resources
+C:\Users\kathelyn.csantana\Documents\Agência de Viagens KR\Visual Studio\AgenciaViagensKR\AgenciaViagensKR\obj\Debug\net8.0-windows\AgenciaViagensKR.CadastrarAge.resources
+C:\Users\kathelyn.csantana\Documents\Agência de Viagens KR\Visual Studio\AgenciaViagensKR\AgenciaViagensKR\obj\Debug\net8.0-windows\AgenciaViagensKR.ConsultarAge.resources
+C:\Users\kathelyn.csantana\Documents\Agência de Viagens KR\Visual Studio\AgenciaViagensKR\AgenciaViagensKR\obj\Debug\net8.0-windows\AgenciaViagensKR.ExcluirAge.resources
+C:\Users\kathelyn.csantana\Documents\Agência de Viagens KR\Visual Studio\AgenciaViagensKR\AgenciaViagensKR\obj\Debug\net8.0-windows\AgenciaViagensKR.LoginAge.resources
