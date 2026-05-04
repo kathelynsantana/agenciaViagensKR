@@ -7,7 +7,13 @@
     <Compile Update="AtualizarAge.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="AtualizarCli.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="CadastrarAge.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="CadastrarCli.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="Cliente.cs">
@@ -16,13 +22,22 @@
     <Compile Update="ConsultarAge.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="ConsultarCli.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="ExcluirAge.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="ExcluirCli.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="LoginAge.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="LoginCli.cs">
       <SubType>Form</SubType>
     </Compile>
   </ItemGroup>

@@ -77,11 +77,11 @@
             // 
             Slogan.AutoSize = true;
             Slogan.BackColor = Color.Transparent;
-            Slogan.Font = new Font("Lucida Handwriting", 18F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            Slogan.Font = new Font("Microsoft Sans Serif", 18F, FontStyle.Bold, GraphicsUnit.Point, 0);
             Slogan.ForeColor = Color.White;
             Slogan.Location = new Point(127, 61);
             Slogan.Name = "Slogan";
-            Slogan.Size = new Size(432, 31);
+            Slogan.Size = new Size(343, 29);
             Slogan.TabIndex = 3;
             Slogan.Text = "Realizando grandes viagens";
             // 
@@ -89,11 +89,11 @@
             // 
             label1.AutoSize = true;
             label1.BackColor = Color.Transparent;
-            label1.Font = new Font("Lucida Handwriting", 20.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label1.Font = new Font("Microsoft Sans Serif", 20.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label1.ForeColor = Color.White;
             label1.Location = new Point(90, 96);
             label1.Name = "label1";
-            label1.Size = new Size(510, 36);
+            label1.Size = new Size(414, 31);
             label1.TabIndex = 4;
             label1.Text = " para o nosso pequeno planeta";
             // 
@@ -125,7 +125,7 @@
             label4.AutoSize = true;
             label4.BackColor = Color.White;
             label4.Font = new Font("Calibri", 14.25F, FontStyle.Bold);
-            label4.Location = new Point(236, 365);
+            label4.Location = new Point(234, 365);
             label4.Name = "label4";
             label4.Size = new Size(205, 23);
             label4.TabIndex = 7;
@@ -188,10 +188,10 @@
             // button3
             // 
             button3.BackColor = Color.LightSeaGreen;
-            button3.FlatStyle = FlatStyle.Popup;
+            button3.FlatStyle = FlatStyle.Flat;
             button3.Font = new Font("Segoe UI", 12F, FontStyle.Bold);
             button3.ForeColor = Color.White;
-            button3.Location = new Point(227, 571);
+            button3.Location = new Point(227, 579);
             button3.Name = "button3";
             button3.Size = new Size(226, 38);
             button3.TabIndex = 14;

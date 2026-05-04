@@ -16,10 +16,10 @@ namespace AgenciaViagensKR
         public MySqlConnection conexao;//Criando a variável que representa a entidade do banco de dados
         public string dados;
         public string comando;
-        public int i;
-        public int contar;
         public string campo;
         public string novoDado;
+        public int i;
+        public int contar;
 
         //Variáveis do Banco de Dados
         public int[] codigo;
@@ -37,7 +37,7 @@ namespace AgenciaViagensKR
                 this.dados = $"('', '{nome}', '{email}', '{senha}', '{comissao}')";
                 this.comando = $"Insert into agenteDeViagens(codigo, nome, email, senha, comissao) values{this.dados}";
 
-                //Inserindo e executando o comando no banco de dados
+                //Inserindo e executando o comando no banco de dados...
                 MySqlCommand sql = new MySqlCommand(this.comando, this.conexao);
                 string resultado = "" + sql.ExecuteNonQuery();//Executando o comando
                 Console.WriteLine($"Os dados do agente de viagens foram inseridos com sucesso!\n{resultado}");
@@ -50,9 +50,10 @@ namespace AgenciaViagensKR
             }//Fim do try_catch
         }//Fim do Cadastrar Agente de Viagens
 
+        //Consultar
+
         //Login
 
-        //Consultar
 
         //Atualizar 
         public string atualizarAgente(int codigo, string campo, string novoDado)

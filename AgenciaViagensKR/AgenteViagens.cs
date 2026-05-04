@@ -10,7 +10,7 @@ using System.Windows.Forms;
 
 namespace AgenciaViagensKR
 {
-    //Agente de Viagens
+    //Área do Agente de Viagens
     public partial class AgenteViagens : Form
     {
         //Variáveis
@@ -22,13 +22,14 @@ namespace AgenciaViagensKR
 
         public AgenteViagens()
         {
+            //Inicialização...
             InitializeComponent();
         }
 
         //Botão Cadastrar
         private void button1_Click(object sender, EventArgs e)
         {
-            //Cadastrar Agente de Viagens
+            //Redirecionando para a tela de cadastro do agente de viagens
             cadAge = new CadastrarAge();
             cadAge.ShowDialog();
 
@@ -37,7 +38,7 @@ namespace AgenciaViagensKR
         //Botão de Login
         private void button2_Click(object sender, EventArgs e)
         {
-            //Cadastrar Agente de Viagens
+            //Redirecionando para a tela de login do agente de viagens
             logAge = new LoginAge();
             logAge.ShowDialog();
 
@@ -46,7 +47,7 @@ namespace AgenciaViagensKR
         //Botão de Consultar
         private void button3_Click(object sender, EventArgs e)
         {
-            //Consultar um Agente de Viagens
+            //Redirecionando para a tela de consulta do agente de viagens
             conAge = new ConsultarAge();
             conAge.ShowDialog();
 
@@ -55,7 +56,7 @@ namespace AgenciaViagensKR
         //Botão de Atualização
         private void button4_Click(object sender, EventArgs e)
         {
-            //Atualizar um Agente de Viagens
+            //Redirecionando para a tela de atualização do agente de viagens
             atuAge = new AtualizarAge();
             atuAge.ShowDialog();
 
@@ -64,10 +65,10 @@ namespace AgenciaViagensKR
         //Botão de Exclusão
         private void button5_Click(object sender, EventArgs e)
         {
-            //Excluir um Agente de Viagens
+            //Redirecionando para a tela de exclusão do agente de viagens
             excAge = new ExcluirAge();
             excAge.ShowDialog();
 
         }//Fim do Botão de Exclusão
-    }//Fim do Agente de Viagens
+    }//Fim da Área do Agente de Viagens
 }//Fim do projeto

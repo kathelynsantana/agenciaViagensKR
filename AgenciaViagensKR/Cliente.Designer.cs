@@ -135,11 +135,11 @@
             // 
             label2.AutoSize = true;
             label2.BackColor = Color.Transparent;
-            label2.Font = new Font("Lucida Handwriting", 24F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label2.Font = new Font("Microsoft Sans Serif", 24F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label2.ForeColor = Color.White;
             label2.Location = new Point(223, 88);
             label2.Name = "label2";
-            label2.Size = new Size(166, 41);
+            label2.Size = new Size(132, 37);
             label2.TabIndex = 20;
             label2.Text = "Cliente!";
             // 
@@ -147,11 +147,11 @@
             // 
             label1.AutoSize = true;
             label1.BackColor = Color.Transparent;
-            label1.Font = new Font("Lucida Handwriting", 20.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label1.Font = new Font("Microsoft Sans Serif", 20.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label1.ForeColor = Color.White;
             label1.Location = new Point(217, 48);
             label1.Name = "label1";
-            label1.Size = new Size(186, 36);
+            label1.Size = new Size(150, 31);
             label1.TabIndex = 19;
             label1.Text = "Bem vindo";
             // 

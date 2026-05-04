@@ -5,13 +5,13 @@ namespace AgenciaViagensKR
     //Homepage
     public partial class Homepage : Form
     {
-        //Vari·veis
+        //Vari√°veis
         Cliente cli;
         AgenteViagens agvg;
 
         public Homepage()
         {
-            //InicializaÁ„o
+            //Inicializando...
             InitializeComponent();
         }
 
@@ -21,22 +21,22 @@ namespace AgenciaViagensKR
 
         }//Fim do Banner Colorido
 
-        //Acesso ‡ ¡rea do Cliente
+        //Acesso √† √Årea do Cliente
         private void button1_Click(object sender, EventArgs e)
         {
-            //Aba da ¡rea do Cliente
+            //Aba da √Årea do Cliente
             cli = new Cliente();
             cli.ShowDialog();
 
-        }//Fim do Acesso ‡ ¡rea do Cliente
+        }//Fim do Acesso √† √Årea do Cliente
 
-        //Acesso ‡ ¡rea do Agente de Viagens
+        //Acesso da √Årea do Agente de Viagens
         private void button2_Click(object sender, EventArgs e)
         {
-            //Aba da ¡rea do Agente de Viagens
+            //Aba da √Årea do Agente de Viagens
             agvg = new AgenteViagens();
             agvg.ShowDialog();
 
-        }//Fim do Acesso ‡ ¡rea do Agente de Viagens
+        }//Fim do Acesso √† √Årea do Agente de Viagens
     }//Fim da Homepage
 }//Fim do projeto
