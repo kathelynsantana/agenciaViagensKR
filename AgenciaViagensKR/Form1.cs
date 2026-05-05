@@ -8,6 +8,7 @@ namespace AgenciaViagensKR
         //Variáveis
         Cliente cli;
         AgenteViagens agvg;
+        Compras comp;
 
         public Homepage()
         {
@@ -38,5 +39,14 @@ namespace AgenciaViagensKR
             agvg.ShowDialog();
 
         }//Fim do Acesso à Área do Agente de Viagens
+
+        //Acesso à Área de Compras
+        private void button3_Click(object sender, EventArgs e)
+        {
+            //Aba da Área de Compras
+            comp = new Compras();
+            comp.ShowDialog();
+
+        }//Fim do Acesso à Área de Compras
     }//Fim da Homepage
 }//Fim do projeto

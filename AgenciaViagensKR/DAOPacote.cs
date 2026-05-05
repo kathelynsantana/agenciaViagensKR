@@ -115,8 +115,8 @@ namespace AgenciaViagensKR
                 this.codigo[i]    = 0;
                 this.destino[i]   = "";
                 this.valor[i]     = 0;
-                this.dataIda[i]   = "";
-                this.dataVolta[i] = "";
+                this.dataIda[i] = new DateTime();
+                this.dataVolta[i] = new DateTime();
                 this.hotel[i]     = "";
             }//Fim do for
 

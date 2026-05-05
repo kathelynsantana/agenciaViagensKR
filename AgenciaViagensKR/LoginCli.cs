@@ -15,6 +15,7 @@ namespace AgenciaViagensKR
     public partial class LoginCli : Form
     {
         DAOCliente cliente;
+
         public LoginCli()
         {
             //Inicialização...
@@ -38,16 +39,16 @@ namespace AgenciaViagensKR
         //Botão de Login
         private void button1_Click(object sender, EventArgs e)
         {
-            //Verificando se os campos estão vazios...
             if ((maskedTextBox1.Text == "") || (maskedTextBox2.Text == ""))
             {
+                //Se os campos estiverem vazios...
                 MessageBox.Show("Por favor, preencha todos os campos!");
-
             }
             else
             {
-                
-            }//Fim do if_else
+                //Executando o login...
+                this.cliente.validarLoginCliente(maskedTextBox1.Text, maskedTextBox2.Text);
+            }
         }//Fim do Botão de Login
     }//Fim da Área de Login Cliente
 }//Fim do projeto

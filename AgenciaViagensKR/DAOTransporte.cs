@@ -52,14 +52,40 @@ namespace AgenciaViagensKR
             try
             {
                 //Configurando a atualização...
+                string query = $"update transporte set {campo} = '{novoDado}' where codigo = '{codigo}'";
+
+                //Executando o comando de atualização...
+                MySqlCommand sql = new MySqlCommand(query, this.conexao);
+                string resultado = "" + sql.ExecuteNonQuery();//Executando o comando
+                return "Os dados foram atualizados com sucesso!";
             }
             catch(Exception erro)
             {
-
+                //Erro na atualização
+                return "Erro! Algo deu errado na atualização!";
             }//Fim do try_catch
         }//Fim do Atualizar
         
         //Excluir
+        public string excluirTransporte(int codigo)
+        {
+            try
+            {
+                //Configurando o excluir...
+                string query = $"delete from transporte where codigo = '{codigo}'";
+
+                //Executando o comando de exclusão...
+                MySqlCommand sql = new MySqlCommand(query, this.conexao);
+                string resultado = "" + sql.ExecuteNonQuery();//Executando o comando
+                return "Deletado com sucesso!";
+            }
+            catch (Exception erro)
+            {
+                //Erro na exclusão
+
+                return "Erro! Algo deu errado na exclusão!";
+            }//Fim do try_catch
+        }//Fim do Excluir
 
         //---------------------------------------------------------------------------------------------------
         //Método Preencher Vetor

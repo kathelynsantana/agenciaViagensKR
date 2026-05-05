@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using MySql.Data.MySqlClient; //Importando os comandos de conexão com o banco
 using static Mysqlx.Expect.Open.Types.Condition.Types;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement.ListView;
 
@@ -13,7 +14,7 @@ namespace AgenciaViagensKR
     class DAOCliente
     {
         //Variáveis
-        public MySqlConnection conexao;//Criando a variável que representa a entidade do banco de dados
+
         public string dados;
         public string comando;
         public string campo;
@@ -22,6 +23,9 @@ namespace AgenciaViagensKR
         public int contar;
         public string msg;
 
+        //Variáveis de outras entidades
+        Compras comp;
+
         //Variáveis do Banco de Dados
         public int[] codigo;
         public string[] nome;
@@ -29,11 +33,28 @@ namespace AgenciaViagensKR
         public DateTime[] dataNascimento;
         public string[] email;
         public string[] senha;
-        public int[] telefone;
+        public string[] telefone;
         public string[] historico;
+        public MySqlConnection conexao;
+
+        public DAOCliente()
+        {
+            //Conexão com o banco de dados...
+            string conexaoString = "server=localhost;database=agenciaDeViagens;uid=root;pwd=;";
+            this.conexao = new MySqlConnection(conexaoString);
+            try
+            {
+                this.conexao.Open();
+                MessageBox.Show("Conectado com sucesso!");
+            }
+            catch (Exception erro)
+            {
+                MessageBox.Show($"Erro ao conectar ao banco de dados: {erro.Message}");
+            }
+        }
 
         //Cadastrar
-        public void cadastrarCliente(string nome, long cpf, DateTime dataNascimento, string email, string senha, int telefone, string historico)
+        public void cadastrarCliente(string nome, long cpf, DateTime dataNascimento, string email, string senha, string telefone, string historico)
         {
             try
             {
@@ -44,13 +65,13 @@ namespace AgenciaViagensKR
                 //Inserindo e executando o comando no banco de dados...
                 MySqlCommand sql = new MySqlCommand(this.comando, this.conexao);
                 string resultado = "" + sql.ExecuteNonQuery();//Executando o comando
-                Console.WriteLine($"Os dados do cliente foram inseridos com sucesso!\n{resultado}");
-                Console.WriteLine("O cadastro foi concluído!\n\n");
+                MessageBox.Show($"Os dados do cliente foram inseridos com sucesso!\n{resultado}");
+                MessageBox.Show("O cadastro foi concluído!\n\n" );
             }
             catch(Exception erro)
             {
                 //Erro no cadastro
-                Console.WriteLine($"Erro! Algo falhou na inserção de dados e no cadastro!");
+                MessageBox.Show($"Erro! Algo falhou na inserção de dados e no cadastro!" + erro);
             }//Fim do try_catch
         }//Fim do Cadastrar
 
@@ -110,7 +131,7 @@ namespace AgenciaViagensKR
                     //Verificando o código...
                     if (this.codigo[i] == codigo)
                     {
-                        return this.cpf[i];
+                        return "" + this.cpf[i];
                     }//Fim do if              
                 }//Fim do for
 
@@ -129,7 +150,7 @@ namespace AgenciaViagensKR
                     //Verificando o código...
                     if (this.codigo[i] == codigo)
                     {
-                        return this.dataNascimento[i];
+                        return "" + this.dataNascimento[i];
                     }//Fim do if              
                 }//Fim do for
 
@@ -137,9 +158,25 @@ namespace AgenciaViagensKR
                 return "O código informado não existe!";
             }//Fim do Consultar Data de Nascimento
 
+            //Consultar e-mail
+            public string consultarEmail(int codigo)
+            {
+                for (int i = 0; i < this.contar; i++)
+                {
+                    //Verificando o código...
+                    if (this.codigo[i] == codigo)
+                    {
+                        return this.email[i];
+                    }//Fim do if              
+                }//Fim do for
+
+            //Se o código não for encontrado...
+            return "O código informado não existe!";
+            }//Fim do Consultar E-mail
+
             //Consultar Telefone
             public string consultarTelefone(int codigo)
-            {
+                {
                 //Preenchendo todos os dados do vetor...
                 preencherVetor();
 
@@ -148,7 +185,7 @@ namespace AgenciaViagensKR
                     //Verificando o código...
                     if (this.codigo[i] == codigo)
                     {
-                        return this.telefone[i];
+                        return "" + this.telefone[i];
                     }//Fim do if              
                 }//Fim do for
 
@@ -177,38 +214,27 @@ namespace AgenciaViagensKR
         //Fim do Consultar
 
         //Login
-             //Consultar e-mail
-            public string consultarEmail(string email)
+        public void validarLoginCliente(string email, string senha)
+        {
+            for(i = 0; i < this.contar; i++)
             {
-                for (int i = 0; i < this.contar; i++)
+                if ((this.email[i] == email) && (this.senha[i] == senha))
                 {
-                    //Verificando o e-mail...
-                    if (email == this.email[i])
-                    {
-                        return "E-mail validado!";
-                    }//Fim do if
-                }//Fim do for
+                    //Se o e-mail e a senha forem encontrados...
+                    Console.WriteLine("Bem-vindo(a)!");
 
-                //Se o e-mail estiver incorreto...
-                return "O e-mail de login informado é inválido!";
-            }//Fim do Consultar E-mail
-
-            //Consultar senha
-            public string consultarSenha(string senha)
-            {
-                for (int i = 0; i < this.contar; i++)
+                    //Redirecionando para a Área de Compras...
+                    comp = new Compras();
+                    comp.ShowDialog();
+                }
+                else
                 {
-                    //Verificando a senha...
-                    if (senha == this.senha[i])
-                    {
-                        return "Senha validada!";
-                    }//Fim do if
-                }//Fim do for
+                    //Se o e-mail ou a senha não forem encontrados...
+                    Console.WriteLine("E-mail ou senha incorretos!");
 
-                //Se a senha estiver incorreta...
-                return "A senha informada é inválida!";
-
-            }//Fim do Consultar Senha
+                }//Fim do if_else
+            }//Fim do for
+        }//Fim do Login
 
         //Atualizar
         public string atualizarCliente(int codigo, string campo, string novoDado)
@@ -267,7 +293,7 @@ namespace AgenciaViagensKR
             this.dataNascimento = new DateTime[100];
             this.email          = new string[100];
             this.senha          = new string[100];
-            this.telefone       = new int[100];
+            this.telefone       = new string[100];
             this.historico      = new string[100];
 
             //Preenchendo os vetores com valores padrões...
@@ -276,10 +302,10 @@ namespace AgenciaViagensKR
                 this.codigo[i]         = 0;
                 this.nome[i]           = "";
                 this.cpf[i]            = 0;
-                this.dataNascimento[i] = DateTime.MinValue;
+                this.dataNascimento[i] = new DateTime();
                 this.email[i]          = "";
                 this.senha[i]          = "";
-                this.telefone[i]       = 0;
+                this.telefone[i]       = "";
                 this.historico[i]      = "";
             }//Fim do for
 
@@ -302,7 +328,7 @@ namespace AgenciaViagensKR
                 this.dataNascimento[i] = Convert.ToDateTime(leitura["dataNascimento"]);
                 this.email[i]          = leitura["email"] + "";
                 this.senha[i]          = leitura["senha"] + "";
-                this.telefone[i]       = Convert.ToInt32(leitura["telefone"]);
+                this.telefone[i]       = leitura["telefone"] + "";
                 this.historico[i]      = leitura["historico"] + "";
 
                 //Informando sobre os dados no banco de dados...

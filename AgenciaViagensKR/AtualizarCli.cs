@@ -8,7 +8,6 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-//AJUSTARRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRR
 namespace AgenciaViagensKR
 {
     //Área de Atualizar Cliente
@@ -24,55 +23,6 @@ namespace AgenciaViagensKR
             cliente = new DAOCliente();
         }
 
-        //MaskedTextBox's
-        //MaskedTextBox do Código
-        private void maskedTextBox1_MaskInputRejected(object sender, MaskInputRejectedEventArgs e)
-        {
-
-        }//Fim do MaskedTextBox do Código
-
-        //MaskedTextBox do Nome
-        private void maskedTextBox2_MaskInputRejected(object sender, MaskInputRejectedEventArgs e)
-        {
-
-        }//Fim do MaskedTextBox do Nome
-
-        //MaskedTextBox do CPF
-        private void maskedTextBox3_MaskInputRejected(object sender, MaskInputRejectedEventArgs e)
-        {
-
-        }//Fim do MaskedTextBox do CPF
-
-        //MaskedTextBox da Data de Nascimento
-        private void maskedTextBox4_MaskInputRejected(object sender, MaskInputRejectedEventArgs e)
-        {
-
-        }//Fim do MaskedTextBox da Data de Nascimento
-
-        //MaskedTextBox do E-mail
-        private void maskedTextBox5_MaskInputRejected(object sender, MaskInputRejectedEventArgs e)
-        {
-
-        }//Fim do MaskedTextBox do E-mail
-
-        //MaskedTextBox da Senha
-        private void maskedTextBox6_MaskInputRejected(object sender, MaskInputRejectedEventArgs e)
-        {
-
-        }//Fim do MaskedTextBox da Senha
-
-        //MaskedTextBox do Telefone
-        private void maskedTextBox7_MaskInputRejected(object sender, MaskInputRejectedEventArgs e)
-        {
-
-        }//Fim do MaskedTextBox do Telefone
-
-        //MaskedTextBox do Histórico de Compras
-        private void maskedTextBox8_MaskInputRejected(object sender, MaskInputRejectedEventArgs e)
-        {
-
-        }//Fim do MaskedTextBox do Histórico de Compras
-
         //Botão de Buscar
         private void button2_Click(object sender, EventArgs e)
         {
@@ -85,13 +35,12 @@ namespace AgenciaViagensKR
             {
                 //Buscando os dados do cliente no Banco de Dados e exibindo...
                 int codigo = Convert.ToInt32(maskedTextBox1.Text);
-                maskedTextBox2.Text = cliente.consultarNome(codigo);
-                maskedTextBox3.Text = cliente.consultarCpf(codigo);
-                maskedTextBox4.Text = cliente.consultarDataNascimento(codigo);
-                maskedTextBox5.Text = cliente.consultarEmail(codigo);
-                maskedTextBox6.Text = cliente.consultarSenha(codigo);
-                maskedTextBox7.Text = cliente.consultarTelefone(codigo);
-                maskedTextBox8.Text = cliente.consultarHistorico(codigo);
+                maskedTextBox2.Text = this.cliente.consultarNome(codigo);
+                maskedTextBox3.Text = this.cliente.consultarCpf(codigo);
+                maskedTextBox4.Text = this.cliente.consultarDataNascimento(codigo);
+                maskedTextBox5.Text = this.cliente.consultarEmail(codigo);
+                maskedTextBox7.Text = this.cliente.consultarTelefone(codigo);
+                maskedTextBox8.Text = this.cliente.consultarHistorico(codigo);
 
             }//Fim do if_else
         } //Fim do Botão de Buscar
@@ -103,7 +52,22 @@ namespace AgenciaViagensKR
             int codigo = Convert.ToInt32(maskedTextBox1.Text);
 
             //Atualizando...
-            
+            this.cliente.atualizarCliente(codigo, "nome", maskedTextBox2.Text);
+            this.cliente.atualizarCliente(codigo, "cpf", maskedTextBox3.Text);
+            this.cliente.atualizarCliente(codigo, "dataNascimento", maskedTextBox4.Text);
+            this.cliente.atualizarCliente(codigo, "email", maskedTextBox5.Text);
+            this.cliente.atualizarCliente(codigo, "telefone", maskedTextBox7.Text);
+            this.cliente.atualizarCliente(codigo, "historico", maskedTextBox8.Text);
+
+            //Limpar os campos
+            maskedTextBox1.Text = "";
+            maskedTextBox2.Text = "";
+            maskedTextBox3.Text = "";
+            maskedTextBox4.Text = "";
+            maskedTextBox5.Text = "";
+            maskedTextBox7.Text = "";
+            maskedTextBox8.Text = "";
+
         }//Fim do Botão de Atualizar
     }//Fim da Área de Atualizar Cliente
 }//Fim do projeto

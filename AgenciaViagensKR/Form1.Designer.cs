@@ -77,11 +77,11 @@
             // 
             Slogan.AutoSize = true;
             Slogan.BackColor = Color.Transparent;
-            Slogan.Font = new Font("Microsoft Sans Serif", 18F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            Slogan.Font = new Font("Lucida Handwriting", 20.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
             Slogan.ForeColor = Color.White;
-            Slogan.Location = new Point(127, 61);
+            Slogan.Location = new Point(110, 58);
             Slogan.Name = "Slogan";
-            Slogan.Size = new Size(343, 29);
+            Slogan.Size = new Size(483, 36);
             Slogan.TabIndex = 3;
             Slogan.Text = "Realizando grandes viagens";
             // 
@@ -89,11 +89,11 @@
             // 
             label1.AutoSize = true;
             label1.BackColor = Color.Transparent;
-            label1.Font = new Font("Microsoft Sans Serif", 20.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label1.Font = new Font("Lucida Handwriting", 24F, FontStyle.Bold);
             label1.ForeColor = Color.White;
-            label1.Location = new Point(90, 96);
+            label1.Location = new Point(41, 96);
             label1.Name = "label1";
-            label1.Size = new Size(414, 31);
+            label1.Size = new Size(598, 41);
             label1.TabIndex = 4;
             label1.Text = " para o nosso pequeno planeta";
             // 
@@ -197,6 +197,7 @@
             button3.TabIndex = 14;
             button3.Text = "Acessar área de Compras";
             button3.UseVisualStyleBackColor = false;
+            button3.Click += button3_Click;
             // 
             // Homepage
             // 

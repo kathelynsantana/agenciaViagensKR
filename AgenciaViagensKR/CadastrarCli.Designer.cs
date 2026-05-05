@@ -43,9 +43,9 @@
             textBox4 = new TextBox();
             button1 = new Button();
             pictureBox1 = new PictureBox();
-            Slogan = new Label();
             label2 = new Label();
             label5 = new Label();
+            label8 = new Label();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
             // 
@@ -117,6 +117,7 @@
             // 
             maskedTextBox1.BorderStyle = BorderStyle.FixedSingle;
             maskedTextBox1.Location = new Point(223, 194);
+            maskedTextBox1.Mask = "999.000.000-00";
             maskedTextBox1.Name = "maskedTextBox1";
             maskedTextBox1.Size = new Size(162, 23);
             maskedTextBox1.TabIndex = 8;
@@ -126,9 +127,11 @@
             // 
             maskedTextBox2.BorderStyle = BorderStyle.FixedSingle;
             maskedTextBox2.Location = new Point(254, 231);
+            maskedTextBox2.Mask = "00/00/0000";
             maskedTextBox2.Name = "maskedTextBox2";
             maskedTextBox2.Size = new Size(131, 23);
             maskedTextBox2.TabIndex = 9;
+            maskedTextBox2.ValidatingType = typeof(DateTime);
             maskedTextBox2.MaskInputRejected += maskedTextBox2_MaskInputRejected;
             // 
             // textBox2
@@ -153,6 +156,7 @@
             // 
             maskedTextBox3.BorderStyle = BorderStyle.FixedSingle;
             maskedTextBox3.Location = new Point(239, 345);
+            maskedTextBox3.Mask = "(99) 00000-0000";
             maskedTextBox3.Name = "maskedTextBox3";
             maskedTextBox3.Size = new Size(146, 23);
             maskedTextBox3.TabIndex = 12;
@@ -191,18 +195,6 @@
             pictureBox1.TabIndex = 15;
             pictureBox1.TabStop = false;
             // 
-            // Slogan
-            // 
-            Slogan.AutoSize = true;
-            Slogan.BackColor = Color.Transparent;
-            Slogan.Font = new Font("Microsoft Sans Serif", 24F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            Slogan.ForeColor = Color.White;
-            Slogan.Location = new Point(112, 43);
-            Slogan.Name = "Slogan";
-            Slogan.Size = new Size(340, 37);
-            Slogan.TabIndex = 16;
-            Slogan.Text = "Cadastrar um Cliente";
-            // 
             // label2
             // 
             label2.AutoSize = true;
@@ -225,15 +217,27 @@
             label5.TabIndex = 18;
             label5.Text = "Senha:";
             // 
+            // label8
+            // 
+            label8.AutoSize = true;
+            label8.BackColor = Color.Transparent;
+            label8.Font = new Font("Lucida Handwriting", 24F, FontStyle.Bold);
+            label8.ForeColor = Color.White;
+            label8.Location = new Point(58, 43);
+            label8.Name = "label8";
+            label8.Size = new Size(432, 41);
+            label8.TabIndex = 19;
+            label8.Text = "Cadastrar um Cliente";
+            // 
             // CadastrarCli
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackgroundImage = (Image)resources.GetObject("$this.BackgroundImage");
             ClientSize = new Size(554, 492);
+            Controls.Add(label8);
             Controls.Add(label5);
             Controls.Add(label2);
-            Controls.Add(Slogan);
             Controls.Add(button1);
             Controls.Add(textBox4);
             Controls.Add(maskedTextBox3);
@@ -272,8 +276,8 @@
         private TextBox textBox4;
         private Button button1;
         private PictureBox pictureBox1;
-        private Label Slogan;
         private Label label2;
         private Label label5;
+        private Label label8;
     }
 }

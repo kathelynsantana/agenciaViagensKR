@@ -1,14 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
-
-namespace AgenciaViagensKR
+﻿namespace AgenciaViagensKR
 {
     //Área de Cadastrar Cliente
     public partial class CadastrarCli : Form
@@ -79,15 +69,24 @@ namespace AgenciaViagensKR
             {
                 //Variáveis locais
                 string nome = textBox1.Text;
-                long cpf = Convert.ToInt64(maskedTextBox1.Text);
-                DateTime dataNascimento = Convert.ToDateTime(maskedTextBox2.Text);
+                long cpf = Convert.ToInt64(maskedTextBox1.Text.Replace(",","").Replace("-",""));//Trata os caracteres e remove eles
+
+                string dt = maskedTextBox2.Text;
+                string dtDia = dt.Substring(0, 2);
+                string dtMes = dt.Substring(3, 2);
+                string dtAno = dt.Substring(6, 4);
+                String dtNascimento = (dtAno + "-" + dtMes + "-" + dtDia); 
+
+              
+                
+                
                 string email = textBox2.Text;
                 string senha = textBox3.Text;
-                int telefone = Convert.ToInt32(maskedTextBox3.Text);
+                string telefone = maskedTextBox3.Text;
                 string historico = textBox4.Text;
-
+                
                 //Inserindo esses dados no Banco de Dados...
-                this.cliente.cadastrarCliente(nome, cpf, dataNascimento, email, senha, telefone, historico);
+                this.cliente.cadastrarCliente(nome, cpf, Convert.ToDateTime(maskedTextBox2.Text), email, senha, telefone, historico);
 
                 //Limpando os campos após o cadastro...
                 LimparCampos();

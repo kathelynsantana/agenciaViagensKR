@@ -44,11 +44,11 @@
             // 
             Slogan.AutoSize = true;
             Slogan.BackColor = Color.Transparent;
-            Slogan.Font = new Font("Microsoft Sans Serif", 24F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            Slogan.Font = new Font("Lucida Handwriting", 24F, FontStyle.Bold);
             Slogan.ForeColor = Color.White;
-            Slogan.Location = new Point(151, 41);
+            Slogan.Location = new Point(110, 42);
             Slogan.Name = "Slogan";
-            Slogan.Size = new Size(264, 37);
+            Slogan.Size = new Size(334, 41);
             Slogan.TabIndex = 17;
             Slogan.Text = "Login do Cliente";
             // 
@@ -57,7 +57,7 @@
             label1.AutoSize = true;
             label1.BackColor = Color.White;
             label1.Font = new Font("Segoe UI Semibold", 14.25F, FontStyle.Bold);
-            label1.Location = new Point(177, 156);
+            label1.Location = new Point(153, 158);
             label1.Name = "label1";
             label1.Size = new Size(238, 25);
             label1.TabIndex = 18;
@@ -88,18 +88,18 @@
             // maskedTextBox1
             // 
             maskedTextBox1.BorderStyle = BorderStyle.FixedSingle;
-            maskedTextBox1.Location = new Point(224, 212);
+            maskedTextBox1.Location = new Point(214, 212);
             maskedTextBox1.Name = "maskedTextBox1";
-            maskedTextBox1.Size = new Size(172, 23);
+            maskedTextBox1.Size = new Size(182, 23);
             maskedTextBox1.TabIndex = 21;
             maskedTextBox1.MaskInputRejected += maskedTextBox1_MaskInputRejected;
             // 
             // maskedTextBox2
             // 
             maskedTextBox2.BorderStyle = BorderStyle.FixedSingle;
-            maskedTextBox2.Location = new Point(224, 262);
+            maskedTextBox2.Location = new Point(214, 262);
             maskedTextBox2.Name = "maskedTextBox2";
-            maskedTextBox2.Size = new Size(172, 23);
+            maskedTextBox2.Size = new Size(182, 23);
             maskedTextBox2.TabIndex = 22;
             maskedTextBox2.MaskInputRejected += maskedTextBox2_MaskInputRejected;
             // 
@@ -109,9 +109,9 @@
             button1.FlatStyle = FlatStyle.Flat;
             button1.Font = new Font("Segoe UI", 12F, FontStyle.Bold);
             button1.ForeColor = Color.White;
-            button1.Location = new Point(168, 340);
+            button1.Location = new Point(153, 316);
             button1.Name = "button1";
-            button1.Size = new Size(218, 35);
+            button1.Size = new Size(243, 35);
             button1.TabIndex = 23;
             button1.Text = "Login";
             button1.UseVisualStyleBackColor = false;
@@ -123,7 +123,7 @@
             pictureBox1.BackgroundImage = (Image)resources.GetObject("pictureBox1.BackgroundImage");
             pictureBox1.Location = new Point(-7, 123);
             pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(567, 378);
+            pictureBox1.Size = new Size(567, 284);
             pictureBox1.TabIndex = 24;
             pictureBox1.TabStop = false;
             // 
@@ -132,7 +132,7 @@
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackgroundImage = (Image)resources.GetObject("$this.BackgroundImage");
-            ClientSize = new Size(554, 492);
+            ClientSize = new Size(554, 404);
             Controls.Add(button1);
             Controls.Add(maskedTextBox2);
             Controls.Add(maskedTextBox1);
