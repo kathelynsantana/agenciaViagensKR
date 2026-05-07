@@ -19,7 +19,6 @@ namespace AgenciaViagensKR
         ConsultarCli conCli;
         AtualizarCli atuCli;
         ExcluirCli excCli;
-      
 
         public Cliente()
         {

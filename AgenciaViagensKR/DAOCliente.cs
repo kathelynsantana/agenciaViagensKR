@@ -14,7 +14,6 @@ namespace AgenciaViagensKR
     class DAOCliente
     {
         //Variáveis
-
         public string dados;
         public string comando;
         public string campo;
@@ -27,6 +26,7 @@ namespace AgenciaViagensKR
         Compras comp;
 
         //Variáveis do Banco de Dados
+        public MySqlConnection conexao;
         public int[] codigo;
         public string[] nome;
         public long[] cpf;
@@ -35,8 +35,8 @@ namespace AgenciaViagensKR
         public string[] senha;
         public string[] telefone;
         public string[] historico;
-        public MySqlConnection conexao;
 
+        //Conectando o Banco de Dados...
         public DAOCliente()
         {
             //Conexão com o banco de dados...
@@ -51,7 +51,8 @@ namespace AgenciaViagensKR
             {
                 MessageBox.Show($"Erro ao conectar ao banco de dados: {erro.Message}");
             }
-        }
+        }//Fim da conexão com o Banco de Dados
+
 
         //Cadastrar
         public void cadastrarCliente(string nome, long cpf, DateTime dataNascimento, string email, string senha, string telefone, string historico)
@@ -102,7 +103,7 @@ namespace AgenciaViagensKR
                 return "O código informado não existe!";
             }//Fim do Consultar por Código do Cliente
 
-            //Consultar por Nome do Cliente
+            //Consultar por Nome
             public string consultarNome(int codigo)
             {
                 preencherVetor();//Preencher todos os dados do vetor
@@ -118,7 +119,7 @@ namespace AgenciaViagensKR
 
                 //Se o código não for encontrado...
                 return "O código informado não existe!";
-            }//Fim do Consultar por Nome do Cliente
+            }//Fim do Consultar Nome
 
             //Consultar CPF
             public string consultarCpf(int codigo)
@@ -158,7 +159,7 @@ namespace AgenciaViagensKR
                 return "O código informado não existe!";
             }//Fim do Consultar Data de Nascimento
 
-            //Consultar e-mail
+            //Consultar E-mail
             public string consultarEmail(int codigo)
             {
                 for (int i = 0; i < this.contar; i++)
@@ -170,8 +171,8 @@ namespace AgenciaViagensKR
                     }//Fim do if              
                 }//Fim do for
 
-            //Se o código não for encontrado...
-            return "O código informado não existe!";
+                //Se o código não for encontrado...
+                return "O código informado não existe!";
             }//Fim do Consultar E-mail
 
             //Consultar Telefone
@@ -216,21 +217,28 @@ namespace AgenciaViagensKR
         //Login
         public void validarLoginCliente(string email, string senha)
         {
+            preencherVetor();
             for(i = 0; i < this.contar; i++)
             {
                 if ((this.email[i] == email) && (this.senha[i] == senha))
                 {
                     //Se o e-mail e a senha forem encontrados...
-                    Console.WriteLine("Bem-vindo(a)!");
+                    MessageBox.Show("Login realizado com sucesso!");
+                    MessageBox.Show("Bem-vindo(a)!");
 
                     //Redirecionando para a Área de Compras...
                     comp = new Compras();
                     comp.ShowDialog();
+                    break;
                 }
                 else
                 {
-                    //Se o e-mail ou a senha não forem encontrados...
-                    Console.WriteLine("E-mail ou senha incorretos!");
+                    if ((this.email[i] != email) || (this.senha[i] != senha))
+                    {
+                        //Se o e-mail ou a senha não forem encontrados...
+                        MessageBox.Show("E-mail ou senha incorretos!");
+
+                    }//Fim do if
 
                 }//Fim do if_else
             }//Fim do for
@@ -247,12 +255,12 @@ namespace AgenciaViagensKR
                 //Executando o comando de atualização...
                 MySqlCommand sql = new MySqlCommand(query, this.conexao);
                 string resultado = "" + sql.ExecuteNonQuery();//Executando o comando
-                return "Os dados foram atualizados com sucesso!";
+                return $"Os dados foram atualizados com sucesso!\n{resultado}";
             }
-            catch
+            catch(Exception erro)
             {
                 //Erro na atualização
-                return "Erro! Algo deu errado na atualização!";
+                return $"Erro! Algo deu errado na atualização!\n\n{erro}";
 
             }//Fim do try_catch
         }//Fim do Atualizar
@@ -268,12 +276,12 @@ namespace AgenciaViagensKR
                 //Executando o comando de exclusão...
                 MySqlCommand sql = new MySqlCommand(query, this.conexao);
                 string resultado = "" + sql.ExecuteNonQuery();//Executando o comando
-                return "Deletado com sucesso!";
+                return $"Deletado com sucesso!\n{resultado}";
             }
             catch (Exception erro)
             {
                 //Erro na exclusão
-                return "Erro! Algo deu errado na exclusão!";
+                return $"Erro! Algo deu errado na exclusão!\n\n{erro}";
 
             }//Fim do try_catch
         }//Fim do Excluir
@@ -325,8 +333,8 @@ namespace AgenciaViagensKR
                 this.codigo[i]         = Convert.ToInt32(leitura["codigo"]);
                 this.nome[i]           = leitura["nome"] + "";
                 this.cpf[i]            = Convert.ToInt64(leitura["cpf"]);
-                this.dataNascimento[i] = Convert.ToDateTime(leitura["dataNascimento"]);
                 this.email[i]          = leitura["email"] + "";
+                //Removi o "this.dataNascimento[i] = Convert.ToDateTime(leitura["dataNascimento"]);"
                 this.senha[i]          = leitura["senha"] + "";
                 this.telefone[i]       = leitura["telefone"] + "";
                 this.historico[i]      = leitura["historico"] + "";

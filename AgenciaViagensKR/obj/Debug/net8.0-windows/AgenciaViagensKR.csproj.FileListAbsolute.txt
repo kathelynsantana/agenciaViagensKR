@@ -129,3 +129,4 @@ C:\Users\kathelyn.csantana\Documents\Agência de Viagens KR\Visual Studio\Agenci
 C:\Users\kathelyn.csantana\Documents\Agência de Viagens KR\Visual Studio\AgenciaViagensKR\obj\Debug\net8.0-windows\AgenciaViagensKR.genruntimeconfig.cache
 C:\Users\kathelyn.csantana\Documents\Agência de Viagens KR\Visual Studio\AgenciaViagensKR\obj\Debug\net8.0-windows\ref\AgenciaViagensKR.dll
 C:\Users\kathelyn.csantana\Documents\Agência de Viagens KR\Visual Studio\AgenciaViagensKR\obj\Debug\net8.0-windows\AgenciaViagensKR.Compras.resources
+C:\Users\kathe\OneDrive\Desktop\Cursos\Curso de TI (TI23T)\Software - Allan\C#\Agência de Viagens KR\Visual Studio\AgenciaViagensKR\obj\Debug\net8.0-windows\AgenciaViagensKR.Compras.resources

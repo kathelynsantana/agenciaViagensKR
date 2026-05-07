@@ -14,7 +14,9 @@ namespace AgenciaViagensKR
     //Área de Login Cliente
     public partial class LoginCli : Form
     {
+        //Variáveis de outras entidades
         DAOCliente cliente;
+        Compras comp;
 
         public LoginCli()
         {
@@ -41,14 +43,16 @@ namespace AgenciaViagensKR
         {
             if ((maskedTextBox1.Text == "") || (maskedTextBox2.Text == ""))
             {
-                //Se os campos estiverem vazios...
-                MessageBox.Show("Por favor, preencha todos os campos!");
+                MessageBox.Show("Por favor, preencha todos os campos para realizar o login!");
             }
-            else
-            {
-                //Executando o login...
-                this.cliente.validarLoginCliente(maskedTextBox1.Text, maskedTextBox2.Text);
-            }
+
+            //Variáveis para receber os dados
+            string email = maskedTextBox1.Text;
+            string senha = maskedTextBox2.Text;
+
+            //Chamando o método de validação de login...
+            cliente.validarLoginCliente(maskedTextBox1.Text, maskedTextBox2.Text);
+             
         }//Fim do Botão de Login
     }//Fim da Área de Login Cliente
 }//Fim do projeto

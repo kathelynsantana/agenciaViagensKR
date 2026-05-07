@@ -59,6 +59,7 @@
             label1.Size = new Size(55, 20);
             label1.TabIndex = 0;
             label1.Text = "Nome:";
+            label1.Click += this.label1_Click;
             // 
             // textBox1
             // 
@@ -90,6 +91,7 @@
             label4.Size = new Size(56, 20);
             label4.TabIndex = 4;
             label4.Text = "E-mail:";
+            label4.Click += this.label4_Click;
             // 
             // label6
             // 
@@ -112,6 +114,7 @@
             label7.Size = new Size(74, 20);
             label7.TabIndex = 7;
             label7.Text = "Histórico:";
+            label7.Click += this.label7_Click;
             // 
             // maskedTextBox1
             // 
@@ -194,6 +197,7 @@
             pictureBox1.Size = new Size(567, 378);
             pictureBox1.TabIndex = 15;
             pictureBox1.TabStop = false;
+            pictureBox1.Click += this.pictureBox1_Click;
             // 
             // label2
             // 
@@ -216,18 +220,20 @@
             label5.Size = new Size(55, 20);
             label5.TabIndex = 18;
             label5.Text = "Senha:";
+            label5.Click += this.label5_Click;
             // 
             // label8
             // 
             label8.AutoSize = true;
             label8.BackColor = Color.Transparent;
-            label8.Font = new Font("Lucida Handwriting", 24F, FontStyle.Bold);
+            label8.Font = new Font("Microsoft Sans Serif", 24F, FontStyle.Bold);
             label8.ForeColor = Color.White;
             label8.Location = new Point(58, 43);
             label8.Name = "label8";
-            label8.Size = new Size(432, 41);
+            label8.Size = new Size(340, 37);
             label8.TabIndex = 19;
             label8.Text = "Cadastrar um Cliente";
+            label8.Click += label8_Click;
             // 
             // CadastrarCli
             // 

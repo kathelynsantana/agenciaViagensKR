@@ -69,22 +69,19 @@
             {
                 //Variáveis locais
                 string nome = textBox1.Text;
-                long cpf = Convert.ToInt64(maskedTextBox1.Text.Replace(",","").Replace("-",""));//Trata os caracteres e remove eles
-
-                string dt = maskedTextBox2.Text;
-                string dtDia = dt.Substring(0, 2);
-                string dtMes = dt.Substring(3, 2);
-                string dtAno = dt.Substring(6, 4);
-                String dtNascimento = (dtAno + "-" + dtMes + "-" + dtDia); 
-
-              
-                
-                
+                long cpf = Convert.ToInt64(maskedTextBox1.Text.Replace(",", "").Replace("-", ""));//Trata os caracteres e remove eles
                 string email = textBox2.Text;
                 string senha = textBox3.Text;
                 string telefone = maskedTextBox3.Text;
                 string historico = textBox4.Text;
-                
+
+                //Tratamento do Datetime...
+                string dt = maskedTextBox2.Text;
+                string dtDia = dt.Substring(0, 2);
+                string dtMes = dt.Substring(3, 2);
+                string dtAno = dt.Substring(6, 4);
+                String dtNascimento = (dtAno + "-" + dtMes + "-" + dtDia);
+
                 //Inserindo esses dados no Banco de Dados...
                 this.cliente.cadastrarCliente(nome, cpf, Convert.ToDateTime(maskedTextBox2.Text), email, senha, telefone, historico);
 
@@ -106,5 +103,10 @@
             textBox4.Text = "";
 
         }//Fim do método de Limpar os Campos
+
+        private void label8_Click(object sender, EventArgs e)
+        {
+
+        }
     }//Fim da Área de Cadastrar Cliente
 }//Fim do projeto

@@ -29,25 +29,12 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ConsultarCli));
-            button1 = new Button();
             pictureBox1 = new PictureBox();
             dataGridView1 = new DataGridView();
+            Slogan = new Label();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             SuspendLayout();
-            // 
-            // button1
-            // 
-            button1.BackColor = Color.Transparent;
-            button1.FlatStyle = FlatStyle.Flat;
-            button1.Font = new Font("Segoe UI", 12F, FontStyle.Bold);
-            button1.ForeColor = Color.White;
-            button1.Location = new Point(162, 528);
-            button1.Name = "button1";
-            button1.Size = new Size(218, 35);
-            button1.TabIndex = 15;
-            button1.Text = "Consultar";
-            button1.UseVisualStyleBackColor = false;
             // 
             // pictureBox1
             // 
@@ -55,7 +42,7 @@
             pictureBox1.BackgroundImage = (Image)resources.GetObject("pictureBox1.BackgroundImage");
             pictureBox1.Location = new Point(-6, 119);
             pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(567, 458);
+            pictureBox1.Size = new Size(567, 424);
             pictureBox1.TabIndex = 16;
             pictureBox1.TabStop = false;
             // 
@@ -68,14 +55,26 @@
             dataGridView1.TabIndex = 17;
             dataGridView1.CellContentClick += dataGridView1_CellContentClick;
             // 
+            // Slogan
+            // 
+            Slogan.AutoSize = true;
+            Slogan.BackColor = Color.Transparent;
+            Slogan.Font = new Font("Microsoft Sans Serif", 24F, FontStyle.Bold);
+            Slogan.ForeColor = Color.White;
+            Slogan.Location = new Point(68, 42);
+            Slogan.Name = "Slogan";
+            Slogan.Size = new Size(336, 37);
+            Slogan.TabIndex = 39;
+            Slogan.Text = "Consultar um Cliente";
+            // 
             // ConsultarCli
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackgroundImage = (Image)resources.GetObject("$this.BackgroundImage");
-            ClientSize = new Size(554, 573);
+            ClientSize = new Size(554, 535);
+            Controls.Add(Slogan);
             Controls.Add(dataGridView1);
-            Controls.Add(button1);
             Controls.Add(pictureBox1);
             Icon = (Icon)resources.GetObject("$this.Icon");
             Name = "ConsultarCli";
@@ -83,12 +82,12 @@
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
             ResumeLayout(false);
+            PerformLayout();
         }
 
         #endregion
-
-        private Button button1;
         private PictureBox pictureBox1;
         private DataGridView dataGridView1;
+        private Label Slogan;
     }
 }

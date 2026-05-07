@@ -10,11 +10,36 @@ using System.Windows.Forms;
 
 namespace AgenciaViagensKR
 {
+    //Área de Excluir Agente de Viagens
     public partial class ExcluirAge : Form
     {
+        //Variáveis
+        DAOAgente agente;
+
         public ExcluirAge()
         {
+            //Inicialização...
             InitializeComponent();
+            agente = new DAOAgente();
         }
-    }
-}
+
+        //Botão de Excluir
+        private void button1_Click(object sender, EventArgs e)
+        {
+            //Verificando se o campo do código está vazio...
+            if (maskedTextBox1.Text == "")
+            {
+                MessageBox.Show("Por favor, preencha o campo do código!");
+            }
+            else
+            {
+                //Executando a exclusão...
+                int codigo = Convert.ToInt32(maskedTextBox1.Text);
+                string excluido = this.agente.excluirAgente(codigo);
+                MessageBox.Show(excluido);//Exibindo a mensagem de exclusão do método
+                maskedTextBox1.Text = "";//Limpando o campo do código
+
+            }//Fim do if else
+        }//Fim do Botão de Excluir
+    }//Fim da Área de Excluir Agente de Viagens
+}//Fim do projeto

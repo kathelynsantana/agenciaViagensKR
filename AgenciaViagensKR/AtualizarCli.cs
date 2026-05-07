@@ -59,6 +59,8 @@ namespace AgenciaViagensKR
             this.cliente.atualizarCliente(codigo, "telefone", maskedTextBox7.Text);
             this.cliente.atualizarCliente(codigo, "historico", maskedTextBox8.Text);
 
+            MessageBox.Show("Os dados foram atualizados com sucesso!");
+
             //Limpar os campos
             maskedTextBox1.Text = "";
             maskedTextBox2.Text = "";

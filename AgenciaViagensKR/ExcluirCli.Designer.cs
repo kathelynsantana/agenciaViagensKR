@@ -122,11 +122,11 @@
             // 
             Slogan.AutoSize = true;
             Slogan.BackColor = Color.Transparent;
-            Slogan.Font = new Font("Lucida Handwriting", 24F, FontStyle.Bold);
+            Slogan.Font = new Font("Microsoft Sans Serif", 24F, FontStyle.Bold);
             Slogan.ForeColor = Color.White;
             Slogan.Location = new Point(94, 39);
             Slogan.Name = "Slogan";
-            Slogan.Size = new Size(373, 41);
+            Slogan.Size = new Size(291, 37);
             Slogan.TabIndex = 19;
             Slogan.Text = "Excluir um Cliente";
             // 
