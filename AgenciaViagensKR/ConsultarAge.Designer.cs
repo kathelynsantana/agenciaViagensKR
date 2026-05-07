@@ -59,11 +59,11 @@
             // 
             Slogan.AutoSize = true;
             Slogan.BackColor = Color.Transparent;
-            Slogan.Font = new Font("Microsoft Sans Serif", 24F, FontStyle.Bold);
+            Slogan.Font = new Font("Lucida Handwriting", 18F, FontStyle.Bold, GraphicsUnit.Point, 0);
             Slogan.ForeColor = Color.White;
-            Slogan.Location = new Point(16, 41);
+            Slogan.Location = new Point(29, 43);
             Slogan.Name = "Slogan";
-            Slogan.Size = new Size(518, 37);
+            Slogan.Size = new Size(487, 31);
             Slogan.TabIndex = 40;
             Slogan.Text = "Consultar um Agente de Viagens";
             // 

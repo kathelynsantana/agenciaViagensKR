@@ -121,9 +121,9 @@
             label7.Font = new Font("Segoe UI Semibold", 11.25F, FontStyle.Bold);
             label7.Location = new Point(165, 345);
             label7.Name = "label7";
-            label7.Size = new Size(74, 20);
+            label7.Size = new Size(77, 20);
             label7.TabIndex = 52;
-            label7.Text = "Histórico:";
+            label7.Text = "Comissão:";
             // 
             // label4
             // 
@@ -165,11 +165,11 @@
             // 
             Slogan.AutoSize = true;
             Slogan.BackColor = Color.Transparent;
-            Slogan.Font = new Font("Microsoft Sans Serif", 24F, FontStyle.Bold);
+            Slogan.Font = new Font("Lucida Handwriting", 18F, FontStyle.Bold, GraphicsUnit.Point, 0);
             Slogan.ForeColor = Color.White;
-            Slogan.Location = new Point(19, 42);
+            Slogan.Location = new Point(32, 45);
             Slogan.Name = "Slogan";
-            Slogan.Size = new Size(506, 37);
+            Slogan.Size = new Size(488, 31);
             Slogan.TabIndex = 60;
             Slogan.Text = "Atualizar um Agente de Viagens";
             // 

@@ -182,7 +182,7 @@
             Slogan.BackColor = Color.Transparent;
             Slogan.Font = new Font("Lucida Handwriting", 24F, FontStyle.Bold);
             Slogan.ForeColor = Color.White;
-            Slogan.Location = new Point(69, 41);
+            Slogan.Location = new Point(64, 41);
             Slogan.Name = "Slogan";
             Slogan.Size = new Size(424, 41);
             Slogan.TabIndex = 38;

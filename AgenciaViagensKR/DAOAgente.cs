@@ -251,7 +251,7 @@ namespace AgenciaViagensKR
                 this.nome[i]     = leitura["nome"] + "";
                 this.email[i]    = leitura["email"] + "";
                 this.senha[i]    = leitura["senha"] + "";
-                this.comissao[i] = Convert.ToDouble(leitura["historico"]);
+                this.comissao[i] = Convert.ToDouble(leitura["comissao"]);
 
                 //Informando sobre os dados no banco de dados...
                 i++;//Vai para a próxima posição do vetor

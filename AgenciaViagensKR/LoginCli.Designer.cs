@@ -44,11 +44,11 @@
             // 
             Slogan.AutoSize = true;
             Slogan.BackColor = Color.Transparent;
-            Slogan.Font = new Font("Microsoft Sans Serif", 24F, FontStyle.Bold);
+            Slogan.Font = new Font("Lucida Handwriting", 24F, FontStyle.Bold);
             Slogan.ForeColor = Color.White;
             Slogan.Location = new Point(110, 42);
             Slogan.Name = "Slogan";
-            Slogan.Size = new Size(264, 37);
+            Slogan.Size = new Size(334, 41);
             Slogan.TabIndex = 17;
             Slogan.Text = "Login do Cliente";
             // 

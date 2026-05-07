@@ -119,11 +119,11 @@
             // 
             Slogan.AutoSize = true;
             Slogan.BackColor = Color.Transparent;
-            Slogan.Font = new Font("Microsoft Sans Serif", 24F, FontStyle.Bold);
+            Slogan.Font = new Font("Lucida Handwriting", 18F, FontStyle.Bold, GraphicsUnit.Point, 0);
             Slogan.ForeColor = Color.White;
-            Slogan.Location = new Point(41, 44);
+            Slogan.Location = new Point(63, 47);
             Slogan.Name = "Slogan";
-            Slogan.Size = new Size(446, 37);
+            Slogan.Size = new Size(417, 31);
             Slogan.TabIndex = 32;
             Slogan.Text = "Login do Agente de Viagens";
             // 

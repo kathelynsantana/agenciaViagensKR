@@ -59,11 +59,11 @@
             // 
             Slogan.AutoSize = true;
             Slogan.BackColor = Color.Transparent;
-            Slogan.Font = new Font("Microsoft Sans Serif", 24F, FontStyle.Bold);
+            Slogan.Font = new Font("Lucida Handwriting", 24F, FontStyle.Bold);
             Slogan.ForeColor = Color.White;
-            Slogan.Location = new Point(68, 42);
+            Slogan.Location = new Point(64, 42);
             Slogan.Name = "Slogan";
-            Slogan.Size = new Size(336, 37);
+            Slogan.Size = new Size(425, 41);
             Slogan.TabIndex = 39;
             Slogan.Text = "Consultar um Cliente";
             // 

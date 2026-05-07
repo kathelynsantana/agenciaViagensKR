@@ -1,4 +1,14 @@
-﻿namespace AgenciaViagensKR
+﻿using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows.Forms;
+
+namespace AgenciaViagensKR
 {
     //Área de Cadastrar Cliente
     public partial class CadastrarCli : Form
@@ -8,36 +18,35 @@
 
         public CadastrarCli()
         {
-            //Inicialização...
+            //Inicializando...
             InitializeComponent();
             cliente = new DAOCliente();
         }
 
         //Textbox's
-        //Textbox do Nome
+        //TextBox do Nome
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
 
-        }//Fim do Textbox do Nome
+        }//Fim do TextBox do Nome
 
-        //Textbox do E-mail
+        //TextBox do E-mail
         private void textBox2_TextChanged(object sender, EventArgs e)
         {
 
-        }//Fim do Textbox do E-mail
+        }//Fim do TextBox do E-mail
 
-        //Textbox da Senha
+        //TextBox da Senha
         private void textBox3_TextChanged(object sender, EventArgs e)
         {
 
-        }//Fim do Textbox da Senha
+        }//Fim do TextBox da Senha
 
-        //Textbox do Histórico de Compras
+        //TextBox do Histórico
         private void textBox4_TextChanged(object sender, EventArgs e)
         {
 
-        }//Fim do Textbox do Histórico de Compras
-
+        }//Fim do TextBox do Histórico
 
         //MaskedTextBox's
         //MaskedTextBox do CPF
@@ -52,13 +61,7 @@
 
         }//Fim do MaskedTextBox da Data de Nascimento
 
-        //MaskedTextBox do Telefone
-        private void maskedTextBox3_MaskInputRejected(object sender, MaskInputRejectedEventArgs e)
-        {
-
-        }//Fim do MaskedTextBox do Telefone
-
-        //Botão Cadastrar
+        //Botão de Cadastrar
         private void button1_Click(object sender, EventArgs e)
         {
             if ((textBox1.Text == "") || (maskedTextBox1.Text == "") || (maskedTextBox2.Text == "") || (textBox2.Text == "") || (textBox3.Text == "") || (maskedTextBox3.Text == "") || (textBox4.Text == ""))
@@ -87,9 +90,8 @@
 
                 //Limpando os campos após o cadastro...
                 LimparCampos();
-
             }//Fim do if_else
-        }//Fim do Botão Cadastrar
+        }//Fim do Botão de Cadastrar
 
         //Limpar os campos
         private void LimparCampos()
@@ -104,9 +106,5 @@
 
         }//Fim do método de Limpar os Campos
 
-        private void label8_Click(object sender, EventArgs e)
-        {
-
-        }
     }//Fim da Área de Cadastrar Cliente
 }//Fim do projeto

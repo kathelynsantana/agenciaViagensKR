@@ -47,11 +47,11 @@
             // 
             label8.AutoSize = true;
             label8.BackColor = Color.Transparent;
-            label8.Font = new Font("Microsoft Sans Serif", 24F, FontStyle.Bold);
+            label8.Font = new Font("Lucida Handwriting", 18F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label8.ForeColor = Color.White;
-            label8.Location = new Point(13, 42);
+            label8.Location = new Point(26, 43);
             label8.Name = "label8";
-            label8.Size = new Size(522, 37);
+            label8.Size = new Size(493, 31);
             label8.TabIndex = 30;
             label8.Text = "Cadastrar um Agente de Viagens";
             // 
