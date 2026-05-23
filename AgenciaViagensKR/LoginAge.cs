@@ -37,6 +37,7 @@ namespace AgenciaViagensKR
 
         }//Fim do MaskedTextBox da Senha
 
+        //Botão de Login
         private void button1_Click(object sender, EventArgs e)
         {
             if ((maskedTextBox1.Text == "") || (maskedTextBox2.Text == ""))
@@ -51,6 +52,14 @@ namespace AgenciaViagensKR
             //Chamando o método de validação de login...
             agente.validarLoginAgente(maskedTextBox1.Text, maskedTextBox2.Text);
 
-        }
+        }//Fim do botão de Login
+
+        //Botão de Voltar
+        private void button6_Click(object sender, EventArgs e)
+        {
+            //Fechar a aba...
+            this.Close();
+
+        }//Fim do Botão de Voltar
     }//Fim da Área de Login Agente de Viagens
 }//Fim do projeto

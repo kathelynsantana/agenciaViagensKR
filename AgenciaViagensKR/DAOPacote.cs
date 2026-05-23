@@ -11,15 +11,16 @@ namespace AgenciaViagensKR
     class DAOPacote
     {
         //Variáveis
-        public MySqlConnection conexao;
         public string dados;
         public string comando;
         public string campo;
         public string novoDado;
         public int i;
         public int contar;
+        public string msg;
 
-        //Variáveis do Banco de Dados
+        //Variáveis e Vetores do Banco de Dados
+        public MySqlConnection conexao;//Criando a variável que representa a entidade do banco de dados
         public int[] codigo;
         public string[] destino;
         public double[] valor;
@@ -27,6 +28,26 @@ namespace AgenciaViagensKR
         public DateTime[] dataVolta;
         public string[] hotel;
 
+        //Conectando o Banco de Dados...
+        public DAOPacote()
+        {
+            //Conexão com o Banco de Dados
+            string conexaoString = "server=localhost;database=agenciaDeViagens;uid=root;pwd=;";
+            this.conexao = new MySqlConnection(conexaoString);
+            try
+            {
+                this.conexao.Open();
+                MessageBox.Show("Conectado com sucesso!");
+            }
+            catch (Exception erro)
+            {
+                MessageBox.Show($"Erro ao conectar ao banco de dados: {erro.Message}");
+            }//Fim do try_catch
+        }//Fim da conexão
+
+
+        //----------------------------------------------------------------------------------------------------
+        //Métodos
         //Cadastrar
         public void cadastrarPacote(string destino, double valor, DateTime dataIda, DateTime dataVolta, string hotel)
         {
@@ -51,6 +72,124 @@ namespace AgenciaViagensKR
         }//Fim do Cadastrar
 
         //Consultar
+            //Consultar por Código do Pacote de Viagens
+            public string consultarCodigo(int codigo)
+            {
+                //Preenchendo todos os dados do vetor...
+                preencherVetor();
+
+                this.msg = "";
+                for (i = 0; i < this.contar; i++)
+                {
+                    //Verificando o código...
+                    if (this.codigo[i] == codigo)
+                    {
+                        this.msg = $"\nCódigo:        {this.codigo[i]}"    +
+                                   $"\nDestino:       {this.destino[i]}"   +
+                                   $"\nValor:         {this.valor[i]}"     +
+                                   $"\nData de Ida:   {this.dataIda[i]}"   +
+                                   $"\nData de Volta: {this.dataVolta[i]}" +
+                                   $"\nHotel:         {this.hotel[i]}";
+                        return this.msg;
+                    }//Fim do if              
+                }//Fim do for
+
+                //Se o código não for encontrado...
+                return "O código informado não existe!";
+            }//Fim do Consultar por Código do Transporte
+
+            //Consultar Destino
+            public string consultarDestino(int codigo)
+            {
+                //Preenchendo todos os dados do vetor...
+                preencherVetor();
+
+                for (int i = 0; i < this.contar; i++)
+                {
+                    //Verificando o código...
+                    if (this.codigo[i] == codigo)
+                    {
+                        return this.destino[i];
+                    }//Fim do if              
+                }//Fim do for
+
+                //Se o código não for encontrado...
+                return "O código informado não existe!";
+            }//Fim do Consultar Destino
+
+            //Consultar Valor
+            public string consultarValor(int codigo)
+            {
+                for (int i = 0; i < this.contar; i++)
+                {
+                    //Verificando o código...
+                    if (this.codigo[i] == codigo)
+                    {
+                        return "" + this.valor[i];
+                    }//Fim do if              
+                }//Fim do for
+
+                //Se o código não for encontrado...
+                return "O código informado não existe!";
+            }//Fim do Consultar Valor
+
+            //Consultar Data de Ida
+            public string consultarDataIda(int codigo)
+            {
+                //Preenchendo todos os dados do vetor...
+                preencherVetor();
+
+                for (i = 0; i < this.contar; i++)
+                {
+                    //Verificando o código...
+                    if (this.codigo[i] == codigo)
+                    {
+                        return "" + this.dataIda[i];
+                    }//Fim do if              
+                }//Fim do for
+
+                //Se o código não for encontrado...
+                return "O código informado não existe!";
+            }//Fim do Consultar Data de Ida
+
+            //Consultar Data de Volta
+            public string consultarDataVolta(int codigo)
+            {
+                //Preenchendo todos os dados do vetor...
+                preencherVetor();
+
+                for (i = 0; i < this.contar; i++)
+                {
+                    //Verificando o código...
+                    if (this.codigo[i] == codigo)
+                    {
+                        return "" + this.dataVolta[i];
+                    }//Fim do if              
+                }//Fim do for
+
+                //Se o código não for encontrado...
+                return "O código informado não existe!";
+            }//Fim do Consultar Data de Volta
+
+            //Consultar Hotel
+            public string consultarHotel(int codigo)
+            {
+                //Preenchendo todos os dados do vetor...
+                preencherVetor();
+
+                for (i = 0; i < this.contar; i++)
+                {
+                    //Verificando o código...
+                    if (this.codigo[i] == codigo)
+                    {
+                        return this.hotel[i];
+                    }//Fim do if              
+                }//Fim do for
+
+                //Se o código não for encontrado...
+                return "O código informado não existe!";
+            }//Fim do Consultar Hotel
+
         //Atualizar
         public string atualizarPacote(int codigo, string campo, string novoDado)
         {
@@ -115,7 +254,7 @@ namespace AgenciaViagensKR
                 this.codigo[i]    = 0;
                 this.destino[i]   = "";
                 this.valor[i]     = 0;
-                this.dataIda[i] = new DateTime();
+                this.dataIda[i]   = new DateTime();
                 this.dataVolta[i] = new DateTime();
                 this.hotel[i]     = "";
             }//Fim do for
@@ -134,7 +273,7 @@ namespace AgenciaViagensKR
             {
                 //Fazendo a leitura dos dados...
                 this.codigo[i]    = Convert.ToInt32(leitura["codigo"]);
-                this.destino[i]   = leitura["destiosno"] + "";
+                this.destino[i]   = leitura["destino"] + "";
                 this.valor[i]     = Convert.ToDouble(leitura["valor"]);
                 this.dataIda[i]   = Convert.ToDateTime(leitura["dataIda"]);
                 this.dataVolta[i] = Convert.ToDateTime(leitura["dataVolta"]);

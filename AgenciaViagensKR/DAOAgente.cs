@@ -4,7 +4,6 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using MySql.Data.MySqlClient; //Importando os comandos de conexão com o banco
 using static Mysqlx.Expect.Open.Types.Condition.Types;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement.ListView;
 
@@ -22,7 +21,10 @@ namespace AgenciaViagensKR
         public int contar;
         public string msg;
 
-        //Variáveis do Banco de Dados
+        //Variáveis de outras entidades
+        GerencAge gerenc;
+
+        //Variáveis e Vetores do Banco de Dados
         public MySqlConnection conexao;//Criando a variável que representa a entidade do banco de dados
         public int[] codigo;
         public string[] nome;
@@ -47,6 +49,9 @@ namespace AgenciaViagensKR
             }
         }//Fim da conexão com o Banco de Dados
 
+
+        //---------------------------------------------------------------------------------------------------
+        //Métodos
         //Cadastrar
         public void cadastrarAgente(string nome, string email, string senha, double comissao)
         {
@@ -73,18 +78,19 @@ namespace AgenciaViagensKR
         //Consultar por Código do Agente de Viagens
             public string consultarCodigo(int codigo)
             {
-                preencherVetor();//Preencher todos os dados do vetor
+                //Preenchendo todos os dados do vetor...
+                preencherVetor();
                 this.msg = "";
                 for (i = 0; i < this.contar; i++)
                 {
                     //Verificando o código...
                     if (this.codigo[i] == codigo)
                     {
-                        this.msg = $"\nCódigo:    {this.codigo[i]} " +
-                                    $"\nNome:     {this.nome[i]} "   +
-                                    $"\nE-mail:   {this.email[i]}"   +
-                                    $"\nSenha:    {this.senha[i]}"   +
-                                    $"\nComissão: {this.comissao[i]}";
+                        this.msg = $"\nCódigo:   {this.codigo[i]}"  +
+                                   $"\nNome:     {this.nome[i]}"    +
+                                   $"\nE-mail:   {this.email[i]}"   +
+                                   $"\nSenha:    {this.senha[i]}"   +
+                                   $"\nComissão: {this.comissao[i]}";
                         return this.msg;
                     }//Fim do if              
                 }//Fim do for
@@ -95,25 +101,29 @@ namespace AgenciaViagensKR
 
             //Consultar Nome
             public string consultarNome(int codigo)
+            {
+                //Preenchendo todos os dados do vetor...
+                preencherVetor();
+
+                for (i = 0; i < this.contar; i++)
                 {
-                    preencherVetor();//Preencher todos os dados do vetor
-
-                    for (i = 0; i < this.contar; i++)
+                    //Verificando o código...
+                    if (this.codigo[i] == codigo)
                     {
-                        //Verificando o código...
-                        if (this.codigo[i] == codigo)
-                        {
-                            return this.nome[i];
-                        }//Fim do if              
-                    }//Fim do for
+                        return this.nome[i];
+                    }//Fim do if              
+                }//Fim do for
 
-                    //Se o código não for encontrado...
-                    return "O código informado não existe!";
+                //Se o código não for encontrado...
+                return "O código informado não existe!";
             }//Fim do Consultar Nome
 
             //Consultar E-mail
             public string consultarEmail(int codigo)
             {
+                //Preenchendo todos os dados do vetor...
+                preencherVetor();
+
                 for (int i = 0; i < this.contar; i++)
                 {
                     //Verificando o código...
@@ -130,6 +140,9 @@ namespace AgenciaViagensKR
             //Consultar Comissão
             public string consultarComissao(int codigo)
             {
+                //Preenchendo todos os dados do vetor...
+                preencherVetor();
+
                 for (i = 0; i < this.contar; i++)
                 {
                     //Verificando o código...
@@ -141,12 +154,14 @@ namespace AgenciaViagensKR
 
                 //Se o código não for encontrado...
                 return "O código informado não existe!";
-            }//Fim do Consultar Telefone
+            }//Fim do Consultar Comissão
 
         //Login
         public void validarLoginAgente(string email, string senha)
         {
+            //Preenchendo todos os dados do vetor...
             preencherVetor();
+
             for (i = 0; i < this.contar; i++)
             {
                 if ((this.email[i] == email) && (this.senha[i] == senha))
@@ -154,18 +169,17 @@ namespace AgenciaViagensKR
                     //Se o e-mail e a senha forem encontrados...
                     MessageBox.Show("Login realizado com sucesso!");
                     MessageBox.Show("Bem-vindo(a)!");
-                }
-                else
-                {
-                    if ((this.email[i] != email) || (this.senha[i] != senha))
-                    {
-                        //Se o e-mail ou a senha não forem encontrados...
-                        MessageBox.Show("E-mail ou senha incorretos!");
 
-                    }//Fim do if
+                    //Redirecionando para a Área de Compras...
+                    gerenc = new GerencAge();
+                    gerenc.ShowDialog();
+                    return;//Encerrando o processo de validação do login
 
-                }//Fim do if_else
+                }//Fim do if
             }//Fim do for
+
+            //Se o e-mail ou a senha não forem encontrados...
+            MessageBox.Show("E-mail ou senha incorretos!");
         }//Fim do Login
 
         //Atualizar 
@@ -214,7 +228,7 @@ namespace AgenciaViagensKR
         //Método Preencher Vetor
         public void preencherVetor()
         {
-            //Buscando todos os dados da tabela do cliente...
+            //Buscando todos os dados da tabela do agente de viagens...
             string query = "select * from agenteDeViagens";
 
             //Instanciando os valores...

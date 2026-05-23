@@ -31,7 +31,6 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Homepage));
             button2 = new Button();
             button1 = new Button();
-            Slogan = new Label();
             label1 = new Label();
             label2 = new Label();
             label3 = new Label();
@@ -42,15 +41,18 @@
             label7 = new Label();
             label8 = new Label();
             button3 = new Button();
+            Slogan = new Label();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
             // 
             // button2
             // 
             button2.BackColor = Color.SandyBrown;
+            button2.FlatAppearance.BorderSize = 0;
             button2.FlatStyle = FlatStyle.Flat;
             button2.Font = new Font("Segoe UI", 12F, FontStyle.Bold);
             button2.ForeColor = Color.White;
+            button2.ImeMode = ImeMode.NoControl;
             button2.Location = new Point(190, 447);
             button2.Name = "button2";
             button2.Size = new Size(292, 38);
@@ -62,9 +64,11 @@
             // button1
             // 
             button1.BackColor = Color.MediumSeaGreen;
+            button1.FlatAppearance.BorderSize = 0;
             button1.FlatStyle = FlatStyle.Flat;
-            button1.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            button1.Font = new Font("Segoe UI", 12F, FontStyle.Bold);
             button1.ForeColor = Color.White;
+            button1.ImeMode = ImeMode.NoControl;
             button1.Location = new Point(236, 300);
             button1.Name = "button1";
             button1.Size = new Size(214, 38);
@@ -73,27 +77,16 @@
             button1.UseVisualStyleBackColor = false;
             button1.Click += button1_Click;
             // 
-            // Slogan
-            // 
-            Slogan.AutoSize = true;
-            Slogan.BackColor = Color.Transparent;
-            Slogan.Font = new Font("Lucida Handwriting", 20.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            Slogan.ForeColor = Color.White;
-            Slogan.Location = new Point(110, 58);
-            Slogan.Name = "Slogan";
-            Slogan.Size = new Size(483, 36);
-            Slogan.TabIndex = 3;
-            Slogan.Text = "Realizando grandes viagens";
-            // 
             // label1
             // 
             label1.AutoSize = true;
             label1.BackColor = Color.Transparent;
-            label1.Font = new Font("Lucida Handwriting", 24F, FontStyle.Bold);
+            label1.Font = new Font("Microsoft Sans Serif", 24F, FontStyle.Bold);
             label1.ForeColor = Color.White;
+            label1.ImeMode = ImeMode.NoControl;
             label1.Location = new Point(41, 96);
             label1.Name = "label1";
-            label1.Size = new Size(598, 41);
+            label1.Size = new Size(489, 37);
             label1.TabIndex = 4;
             label1.Text = " para o nosso pequeno planeta";
             // 
@@ -102,6 +95,7 @@
             label2.AutoSize = true;
             label2.BackColor = Color.White;
             label2.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold);
+            label2.ImeMode = ImeMode.NoControl;
             label2.Location = new Point(144, 264);
             label2.Name = "label2";
             label2.Size = new Size(396, 21);
@@ -112,8 +106,9 @@
             // 
             label3.AutoSize = true;
             label3.BackColor = Color.White;
-            label3.Font = new Font("Calibri", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label3.Font = new Font("Calibri", 14.25F, FontStyle.Bold);
             label3.ForeColor = Color.Black;
+            label3.ImeMode = ImeMode.NoControl;
             label3.Location = new Point(195, 241);
             label3.Name = "label3";
             label3.Size = new Size(285, 23);
@@ -125,6 +120,7 @@
             label4.AutoSize = true;
             label4.BackColor = Color.White;
             label4.Font = new Font("Calibri", 14.25F, FontStyle.Bold);
+            label4.ImeMode = ImeMode.NoControl;
             label4.Location = new Point(234, 365);
             label4.Name = "label4";
             label4.Size = new Size(205, 23);
@@ -136,6 +132,7 @@
             label5.AutoSize = true;
             label5.BackColor = Color.White;
             label5.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold);
+            label5.ImeMode = ImeMode.NoControl;
             label5.Location = new Point(171, 388);
             label5.Name = "label5";
             label5.Size = new Size(338, 21);
@@ -147,6 +144,7 @@
             label6.AutoSize = true;
             label6.BackColor = Color.White;
             label6.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold);
+            label6.ImeMode = ImeMode.NoControl;
             label6.Location = new Point(260, 410);
             label6.Name = "label6";
             label6.Size = new Size(155, 21);
@@ -157,6 +155,7 @@
             // 
             pictureBox1.BackColor = Color.White;
             pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
+            pictureBox1.ImeMode = ImeMode.NoControl;
             pictureBox1.Location = new Point(-5, 187);
             pictureBox1.Name = "pictureBox1";
             pictureBox1.Size = new Size(703, 484);
@@ -168,7 +167,8 @@
             label7.AutoSize = true;
             label7.BackColor = Color.White;
             label7.Font = new Font("Calibri", 14.25F, FontStyle.Bold);
-            label7.Location = new Point(150, 515);
+            label7.ImeMode = ImeMode.NoControl;
+            label7.Location = new Point(150, 516);
             label7.Name = "label7";
             label7.Size = new Size(370, 23);
             label7.TabIndex = 12;
@@ -179,7 +179,8 @@
             label8.AutoSize = true;
             label8.BackColor = Color.White;
             label8.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold);
-            label8.Location = new Point(212, 538);
+            label8.ImeMode = ImeMode.NoControl;
+            label8.Location = new Point(212, 539);
             label8.Name = "label8";
             label8.Size = new Size(245, 21);
             label8.TabIndex = 13;
@@ -188,10 +189,12 @@
             // button3
             // 
             button3.BackColor = Color.LightSeaGreen;
+            button3.FlatAppearance.BorderSize = 0;
             button3.FlatStyle = FlatStyle.Flat;
             button3.Font = new Font("Segoe UI", 12F, FontStyle.Bold);
             button3.ForeColor = Color.White;
-            button3.Location = new Point(227, 579);
+            button3.ImeMode = ImeMode.NoControl;
+            button3.Location = new Point(227, 580);
             button3.Name = "button3";
             button3.Size = new Size(226, 38);
             button3.TabIndex = 14;
@@ -199,12 +202,25 @@
             button3.UseVisualStyleBackColor = false;
             button3.Click += button3_Click;
             // 
+            // Slogan
+            // 
+            Slogan.AutoSize = true;
+            Slogan.BackColor = Color.Transparent;
+            Slogan.Font = new Font("Microsoft Sans Serif", 20.25F, FontStyle.Bold);
+            Slogan.ForeColor = Color.White;
+            Slogan.ImeMode = ImeMode.NoControl;
+            Slogan.Location = new Point(110, 58);
+            Slogan.Name = "Slogan";
+            Slogan.Size = new Size(382, 31);
+            Slogan.TabIndex = 3;
+            Slogan.Text = "Realizando grandes viagens";
+            // 
             // Homepage
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackgroundImage = (Image)resources.GetObject("$this.BackgroundImage");
-            ClientSize = new Size(692, 669);
+            ClientSize = new Size(695, 669);
             Controls.Add(button3);
             Controls.Add(label8);
             Controls.Add(label7);
@@ -230,7 +246,6 @@
         #endregion
         private Button button2;
         private Button button1;
-        private Label Slogan;
         private Label label1;
         private Label label2;
         private Label label3;
@@ -241,5 +256,6 @@
         private Label label7;
         private Label label8;
         private Button button3;
+        private Label Slogan;
     }
 }

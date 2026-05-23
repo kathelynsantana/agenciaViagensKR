@@ -40,6 +40,7 @@
             textBox1 = new TextBox();
             label1 = new Label();
             pictureBox1 = new PictureBox();
+            button6 = new Button();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
             // 
@@ -47,11 +48,11 @@
             // 
             label8.AutoSize = true;
             label8.BackColor = Color.Transparent;
-            label8.Font = new Font("Lucida Handwriting", 18F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label8.Font = new Font("Microsoft Sans Serif", 18F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label8.ForeColor = Color.White;
             label8.Location = new Point(26, 43);
             label8.Name = "label8";
-            label8.Size = new Size(493, 31);
+            label8.Size = new Size(395, 29);
             label8.TabIndex = 30;
             label8.Text = "Cadastrar um Agente de Viagens";
             // 
@@ -159,12 +160,28 @@
             pictureBox1.TabIndex = 28;
             pictureBox1.TabStop = false;
             // 
+            // button6
+            // 
+            button6.BackColor = Color.Transparent;
+            button6.FlatAppearance.BorderSize = 0;
+            button6.FlatStyle = FlatStyle.Flat;
+            button6.Font = new Font("Segoe UI Historic", 15.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            button6.ForeColor = Color.White;
+            button6.Location = new Point(517, 1);
+            button6.Name = "button6";
+            button6.Size = new Size(33, 35);
+            button6.TabIndex = 31;
+            button6.Text = "↩";
+            button6.UseVisualStyleBackColor = false;
+            button6.Click += button6_Click;
+            // 
             // CadastrarAge
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackgroundImage = (Image)resources.GetObject("$this.BackgroundImage");
             ClientSize = new Size(554, 370);
+            Controls.Add(button6);
             Controls.Add(label8);
             Controls.Add(label5);
             Controls.Add(button1);
@@ -197,5 +214,6 @@
         private TextBox textBox1;
         private Label label1;
         private PictureBox pictureBox1;
+        private Button button6;
     }
 }

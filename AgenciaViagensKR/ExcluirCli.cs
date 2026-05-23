@@ -47,5 +47,13 @@ namespace AgenciaViagensKR
 
             }//Fim do if else
         }//Fim do Botão Excluir
+
+        //Botão de Voltar
+        private void button6_Click(object sender, EventArgs e)
+        {
+            //Fechar a aba...
+            this.Close();
+
+        }//Fim do Botão Voltar
     }//Fim da Área de Excluir Cliente
 }//Fim do projeto

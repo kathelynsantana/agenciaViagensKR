@@ -85,5 +85,12 @@ namespace AgenciaViagensKR
             return dataGridView1;
         }//Fim do retornar o DataGridView
 
+        //Botão de Voltar
+        private void button6_Click(object sender, EventArgs e)
+        {
+            //Fechar a aba...
+            this.Close();
+
+        }//Fim do Botão de Voltar
     }//Fim da Área de Consulta do Cliente
 }//Fim do projeto

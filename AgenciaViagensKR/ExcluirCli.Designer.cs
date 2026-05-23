@@ -37,6 +37,7 @@
             label3 = new Label();
             label4 = new Label();
             Slogan = new Label();
+            button6 = new Button();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
             // 
@@ -122,13 +123,28 @@
             // 
             Slogan.AutoSize = true;
             Slogan.BackColor = Color.Transparent;
-            Slogan.Font = new Font("Lucida Handwriting", 24F, FontStyle.Bold);
+            Slogan.Font = new Font("Microsoft Sans Serif", 24F, FontStyle.Bold);
             Slogan.ForeColor = Color.White;
             Slogan.Location = new Point(89, 39);
             Slogan.Name = "Slogan";
-            Slogan.Size = new Size(373, 41);
+            Slogan.Size = new Size(291, 37);
             Slogan.TabIndex = 19;
             Slogan.Text = "Excluir um Cliente";
+            // 
+            // button6
+            // 
+            button6.BackColor = Color.Transparent;
+            button6.FlatAppearance.BorderSize = 0;
+            button6.FlatStyle = FlatStyle.Flat;
+            button6.Font = new Font("Segoe UI Historic", 15.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            button6.ForeColor = Color.White;
+            button6.Location = new Point(516, -1);
+            button6.Name = "button6";
+            button6.Size = new Size(33, 35);
+            button6.TabIndex = 49;
+            button6.Text = "↩";
+            button6.UseVisualStyleBackColor = false;
+            button6.Click += button6_Click;
             // 
             // ExcluirCli
             // 
@@ -136,6 +152,7 @@
             AutoScaleMode = AutoScaleMode.Font;
             BackgroundImage = (Image)resources.GetObject("$this.BackgroundImage");
             ClientSize = new Size(554, 475);
+            Controls.Add(button6);
             Controls.Add(Slogan);
             Controls.Add(label4);
             Controls.Add(label3);
@@ -162,5 +179,6 @@
         private Label label3;
         private Label label4;
         private Label Slogan;
+        private Button button6;
     }
 }

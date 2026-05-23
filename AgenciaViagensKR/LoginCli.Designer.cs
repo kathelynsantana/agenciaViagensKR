@@ -37,6 +37,7 @@
             maskedTextBox2 = new MaskedTextBox();
             button1 = new Button();
             pictureBox1 = new PictureBox();
+            button6 = new Button();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
             // 
@@ -44,11 +45,11 @@
             // 
             Slogan.AutoSize = true;
             Slogan.BackColor = Color.Transparent;
-            Slogan.Font = new Font("Lucida Handwriting", 24F, FontStyle.Bold);
+            Slogan.Font = new Font("Microsoft Sans Serif", 24F, FontStyle.Bold);
             Slogan.ForeColor = Color.White;
             Slogan.Location = new Point(110, 42);
             Slogan.Name = "Slogan";
-            Slogan.Size = new Size(334, 41);
+            Slogan.Size = new Size(264, 37);
             Slogan.TabIndex = 17;
             Slogan.Text = "Login do Cliente";
             // 
@@ -127,12 +128,28 @@
             pictureBox1.TabIndex = 24;
             pictureBox1.TabStop = false;
             // 
+            // button6
+            // 
+            button6.BackColor = Color.Transparent;
+            button6.FlatAppearance.BorderSize = 0;
+            button6.FlatStyle = FlatStyle.Flat;
+            button6.Font = new Font("Segoe UI Historic", 15.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            button6.ForeColor = Color.White;
+            button6.Location = new Point(516, -1);
+            button6.Name = "button6";
+            button6.Size = new Size(33, 35);
+            button6.TabIndex = 49;
+            button6.Text = "↩";
+            button6.UseVisualStyleBackColor = false;
+            button6.Click += button6_Click;
+            // 
             // LoginCli
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackgroundImage = (Image)resources.GetObject("$this.BackgroundImage");
             ClientSize = new Size(554, 404);
+            Controls.Add(button6);
             Controls.Add(button1);
             Controls.Add(maskedTextBox2);
             Controls.Add(maskedTextBox1);
@@ -158,5 +175,6 @@
         private MaskedTextBox maskedTextBox2;
         private Button button1;
         private PictureBox pictureBox1;
+        private Button button6;
     }
 }

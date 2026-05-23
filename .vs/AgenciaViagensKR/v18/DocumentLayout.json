@@ -1,0 +1,171 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\kathe\\OneDrive\\Desktop\\Cursos\\Curso de TI (TI23T)\\Software - Allan\\C#\\Ag\u00EAncia de Viagens KR\\Programa\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{7AB69679-C4C0-4E00-B226-58CAF0D6BA17}|AgenciaViagensKR\\AgenciaViagensKR.csproj|c:\\users\\kathe\\onedrive\\desktop\\cursos\\curso de ti (ti23t)\\software - allan\\c#\\ag\u00EAncia de viagens kr\\programa\\agenciaviagenskr\\daocompra.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7AB69679-C4C0-4E00-B226-58CAF0D6BA17}|AgenciaViagensKR\\AgenciaViagensKR.csproj|solutionrelative:agenciaviagenskr\\daocompra.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7AB69679-C4C0-4E00-B226-58CAF0D6BA17}|AgenciaViagensKR\\AgenciaViagensKR.csproj|c:\\users\\kathe\\onedrive\\desktop\\cursos\\curso de ti (ti23t)\\software - allan\\c#\\ag\u00EAncia de viagens kr\\programa\\agenciaviagenskr\\daocliente.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7AB69679-C4C0-4E00-B226-58CAF0D6BA17}|AgenciaViagensKR\\AgenciaViagensKR.csproj|solutionrelative:agenciaviagenskr\\daocliente.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7AB69679-C4C0-4E00-B226-58CAF0D6BA17}|AgenciaViagensKR\\AgenciaViagensKR.csproj|c:\\users\\kathe\\onedrive\\desktop\\cursos\\curso de ti (ti23t)\\software - allan\\c#\\ag\u00EAncia de viagens kr\\programa\\agenciaviagenskr\\daoagente.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7AB69679-C4C0-4E00-B226-58CAF0D6BA17}|AgenciaViagensKR\\AgenciaViagensKR.csproj|solutionrelative:agenciaviagenskr\\daoagente.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7AB69679-C4C0-4E00-B226-58CAF0D6BA17}|AgenciaViagensKR\\AgenciaViagensKR.csproj|c:\\users\\kathe\\onedrive\\desktop\\cursos\\curso de ti (ti23t)\\software - allan\\c#\\ag\u00EAncia de viagens kr\\programa\\agenciaviagenskr\\daotransporte.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7AB69679-C4C0-4E00-B226-58CAF0D6BA17}|AgenciaViagensKR\\AgenciaViagensKR.csproj|solutionrelative:agenciaviagenskr\\daotransporte.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7AB69679-C4C0-4E00-B226-58CAF0D6BA17}|AgenciaViagensKR\\AgenciaViagensKR.csproj|c:\\users\\kathe\\onedrive\\desktop\\cursos\\curso de ti (ti23t)\\software - allan\\c#\\ag\u00EAncia de viagens kr\\programa\\agenciaviagenskr\\daopacote.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7AB69679-C4C0-4E00-B226-58CAF0D6BA17}|AgenciaViagensKR\\AgenciaViagensKR.csproj|solutionrelative:agenciaviagenskr\\daopacote.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7AB69679-C4C0-4E00-B226-58CAF0D6BA17}|AgenciaViagensKR\\AgenciaViagensKR.csproj|c:\\users\\kathe\\onedrive\\desktop\\cursos\\curso de ti (ti23t)\\software - allan\\c#\\ag\u00EAncia de viagens kr\\programa\\agenciaviagenskr\\daoform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7AB69679-C4C0-4E00-B226-58CAF0D6BA17}|AgenciaViagensKR\\AgenciaViagensKR.csproj|solutionrelative:agenciaviagenskr\\daoform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7AB69679-C4C0-4E00-B226-58CAF0D6BA17}|AgenciaViagensKR\\AgenciaViagensKR.csproj|c:\\users\\kathe\\onedrive\\desktop\\cursos\\curso de ti (ti23t)\\software - allan\\c#\\ag\u00EAncia de viagens kr\\programa\\agenciaviagenskr\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7AB69679-C4C0-4E00-B226-58CAF0D6BA17}|AgenciaViagensKR\\AgenciaViagensKR.csproj|solutionrelative:agenciaviagenskr\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7AB69679-C4C0-4E00-B226-58CAF0D6BA17}|AgenciaViagensKR\\AgenciaViagensKR.csproj|C:\\Users\\kathe\\OneDrive\\Desktop\\Cursos\\Curso de TI (TI23T)\\Software - Allan\\C#\\Ag\u00EAncia de Viagens KR\\Programa\\agenciaviagenskr\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{7AB69679-C4C0-4E00-B226-58CAF0D6BA17}|AgenciaViagensKR\\AgenciaViagensKR.csproj|solutionrelative:agenciaviagenskr\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 5,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "Form1.cs [Projeto]",
+              "DocumentMoniker": "C:\\Users\\kathe\\OneDrive\\Desktop\\Cursos\\Curso de TI (TI23T)\\Software - Allan\\C#\\Ag\u00EAncia de Viagens KR\\Programa\\AgenciaViagensKR\\Form1.cs",
+              "RelativeDocumentMoniker": "AgenciaViagensKR\\Form1.cs",
+              "ToolTip": "C:\\Users\\kathe\\OneDrive\\Desktop\\Cursos\\Curso de TI (TI23T)\\Software - Allan\\C#\\Ag\u00EAncia de Viagens KR\\Programa\\AgenciaViagensKR\\Form1.cs [Projeto]",
+              "RelativeToolTip": "AgenciaViagensKR\\Form1.cs [Projeto]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-22T13:24:57.161Z",
+              "IsPinned": true,
+              "EditorCaption": " [Projeto]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Form1.cs",
+              "DocumentMoniker": "C:\\Users\\kathe\\OneDrive\\Desktop\\Cursos\\Curso de TI (TI23T)\\Software - Allan\\C#\\Ag\u00EAncia de Viagens KR\\Programa\\AgenciaViagensKR\\Form1.cs",
+              "RelativeDocumentMoniker": "AgenciaViagensKR\\Form1.cs",
+              "ToolTip": "C:\\Users\\kathe\\OneDrive\\Desktop\\Cursos\\Curso de TI (TI23T)\\Software - Allan\\C#\\Ag\u00EAncia de Viagens KR\\Programa\\AgenciaViagensKR\\Form1.cs",
+              "RelativeToolTip": "AgenciaViagensKR\\Form1.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAVAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-22T19:13:41.609Z",
+              "IsPinned": true,
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "DAOForm.cs",
+              "DocumentMoniker": "C:\\Users\\kathe\\OneDrive\\Desktop\\Cursos\\Curso de TI (TI23T)\\Software - Allan\\C#\\Ag\u00EAncia de Viagens KR\\Programa\\AgenciaViagensKR\\DAOForm.cs",
+              "RelativeDocumentMoniker": "AgenciaViagensKR\\DAOForm.cs",
+              "ToolTip": "C:\\Users\\kathe\\OneDrive\\Desktop\\Cursos\\Curso de TI (TI23T)\\Software - Allan\\C#\\Ag\u00EAncia de Viagens KR\\Programa\\AgenciaViagensKR\\DAOForm.cs",
+              "RelativeToolTip": "AgenciaViagensKR\\DAOForm.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-22T19:14:20.28Z",
+              "IsPinned": true,
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "DAOAgente.cs",
+              "DocumentMoniker": "C:\\Users\\kathe\\OneDrive\\Desktop\\Cursos\\Curso de TI (TI23T)\\Software - Allan\\C#\\Ag\u00EAncia de Viagens KR\\Programa\\AgenciaViagensKR\\DAOAgente.cs",
+              "RelativeDocumentMoniker": "AgenciaViagensKR\\DAOAgente.cs",
+              "ToolTip": "C:\\Users\\kathe\\OneDrive\\Desktop\\Cursos\\Curso de TI (TI23T)\\Software - Allan\\C#\\Ag\u00EAncia de Viagens KR\\Programa\\AgenciaViagensKR\\DAOAgente.cs",
+              "RelativeToolTip": "AgenciaViagensKR\\DAOAgente.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-23T17:04:51.252Z",
+              "IsPinned": true,
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "DAOCliente.cs",
+              "DocumentMoniker": "C:\\Users\\kathe\\OneDrive\\Desktop\\Cursos\\Curso de TI (TI23T)\\Software - Allan\\C#\\Ag\u00EAncia de Viagens KR\\Programa\\AgenciaViagensKR\\DAOCliente.cs",
+              "RelativeDocumentMoniker": "AgenciaViagensKR\\DAOCliente.cs",
+              "ToolTip": "C:\\Users\\kathe\\OneDrive\\Desktop\\Cursos\\Curso de TI (TI23T)\\Software - Allan\\C#\\Ag\u00EAncia de Viagens KR\\Programa\\AgenciaViagensKR\\DAOCliente.cs",
+              "RelativeToolTip": "AgenciaViagensKR\\DAOCliente.cs",
+              "ViewState": "AgIAABEBAAAAAAAAAAAqwCMBAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-23T17:04:52.226Z",
+              "IsPinned": true,
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "DAOCompra.cs",
+              "DocumentMoniker": "C:\\Users\\kathe\\OneDrive\\Desktop\\Cursos\\Curso de TI (TI23T)\\Software - Allan\\C#\\Ag\u00EAncia de Viagens KR\\Programa\\AgenciaViagensKR\\DAOCompra.cs",
+              "RelativeDocumentMoniker": "AgenciaViagensKR\\DAOCompra.cs",
+              "ToolTip": "C:\\Users\\kathe\\OneDrive\\Desktop\\Cursos\\Curso de TI (TI23T)\\Software - Allan\\C#\\Ag\u00EAncia de Viagens KR\\Programa\\AgenciaViagensKR\\DAOCompra.cs",
+              "RelativeToolTip": "AgenciaViagensKR\\DAOCompra.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAALAAAAARAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-23T17:04:53.326Z",
+              "IsPinned": true,
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "DAOPacote.cs",
+              "DocumentMoniker": "C:\\Users\\kathe\\OneDrive\\Desktop\\Cursos\\Curso de TI (TI23T)\\Software - Allan\\C#\\Ag\u00EAncia de Viagens KR\\Programa\\AgenciaViagensKR\\DAOPacote.cs",
+              "RelativeDocumentMoniker": "AgenciaViagensKR\\DAOPacote.cs",
+              "ToolTip": "C:\\Users\\kathe\\OneDrive\\Desktop\\Cursos\\Curso de TI (TI23T)\\Software - Allan\\C#\\Ag\u00EAncia de Viagens KR\\Programa\\AgenciaViagensKR\\DAOPacote.cs",
+              "RelativeToolTip": "AgenciaViagensKR\\DAOPacote.cs",
+              "ViewState": "AgIAAO8AAAAAAAAAAAAswBEBAAAwAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-23T17:04:18.42Z",
+              "IsPinned": true,
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "DAOTransporte.cs",
+              "DocumentMoniker": "C:\\Users\\kathe\\OneDrive\\Desktop\\Cursos\\Curso de TI (TI23T)\\Software - Allan\\C#\\Ag\u00EAncia de Viagens KR\\Programa\\AgenciaViagensKR\\DAOTransporte.cs",
+              "RelativeDocumentMoniker": "AgenciaViagensKR\\DAOTransporte.cs",
+              "ToolTip": "C:\\Users\\kathe\\OneDrive\\Desktop\\Cursos\\Curso de TI (TI23T)\\Software - Allan\\C#\\Ag\u00EAncia de Viagens KR\\Programa\\AgenciaViagensKR\\DAOTransporte.cs",
+              "RelativeToolTip": "AgenciaViagensKR\\DAOTransporte.cs",
+              "ViewState": "AgIAAEUAAAAAAAAAAAAowAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-23T17:04:57.419Z",
+              "IsPinned": true,
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{b1e99781-ab81-11d0-b683-00aa00a3ee26}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

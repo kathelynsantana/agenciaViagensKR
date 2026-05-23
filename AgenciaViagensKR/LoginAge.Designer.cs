@@ -37,6 +37,7 @@
             label1 = new Label();
             pictureBox1 = new PictureBox();
             Slogan = new Label();
+            button6 = new Button();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
             // 
@@ -119,13 +120,28 @@
             // 
             Slogan.AutoSize = true;
             Slogan.BackColor = Color.Transparent;
-            Slogan.Font = new Font("Lucida Handwriting", 18F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            Slogan.Font = new Font("Microsoft Sans Serif", 18F, FontStyle.Bold, GraphicsUnit.Point, 0);
             Slogan.ForeColor = Color.White;
             Slogan.Location = new Point(63, 47);
             Slogan.Name = "Slogan";
-            Slogan.Size = new Size(417, 31);
+            Slogan.Size = new Size(342, 29);
             Slogan.TabIndex = 32;
             Slogan.Text = "Login do Agente de Viagens";
+            // 
+            // button6
+            // 
+            button6.BackColor = Color.Transparent;
+            button6.FlatAppearance.BorderSize = 0;
+            button6.FlatStyle = FlatStyle.Flat;
+            button6.Font = new Font("Segoe UI Historic", 15.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            button6.ForeColor = Color.White;
+            button6.Location = new Point(516, 0);
+            button6.Name = "button6";
+            button6.Size = new Size(33, 35);
+            button6.TabIndex = 49;
+            button6.Text = "↩";
+            button6.UseVisualStyleBackColor = false;
+            button6.Click += button6_Click;
             // 
             // LoginAge
             // 
@@ -133,6 +149,7 @@
             AutoScaleMode = AutoScaleMode.Font;
             BackgroundImage = (Image)resources.GetObject("$this.BackgroundImage");
             ClientSize = new Size(554, 404);
+            Controls.Add(button6);
             Controls.Add(Slogan);
             Controls.Add(button1);
             Controls.Add(maskedTextBox2);
@@ -159,5 +176,6 @@
         private Label label1;
         private PictureBox pictureBox1;
         private Label Slogan;
+        private Button button6;
     }
 }

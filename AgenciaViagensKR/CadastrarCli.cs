@@ -106,5 +106,12 @@ namespace AgenciaViagensKR
 
         }//Fim do método de Limpar os Campos
 
+        //Botão de Voltar
+        private void button6_Click(object sender, EventArgs e)
+        {
+            //Fechando a aba...
+            this.Close();
+
+        }//Fim do Botão de Voltar
     }//Fim da Área de Cadastrar Cliente
 }//Fim do projeto

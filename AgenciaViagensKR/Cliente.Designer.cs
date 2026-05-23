@@ -36,8 +36,8 @@
             button3 = new Button();
             button2 = new Button();
             button1 = new Button();
-            label2 = new Label();
             label1 = new Label();
+            button6 = new Button();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
             // 
@@ -64,6 +64,7 @@
             // button5
             // 
             button5.BackColor = Color.Coral;
+            button5.FlatAppearance.BorderSize = 0;
             button5.FlatStyle = FlatStyle.Flat;
             button5.Font = new Font("Segoe UI", 12F, FontStyle.Bold);
             button5.ForeColor = Color.White;
@@ -78,6 +79,7 @@
             // button4
             // 
             button4.BackColor = Color.SandyBrown;
+            button4.FlatAppearance.BorderSize = 0;
             button4.FlatStyle = FlatStyle.Flat;
             button4.Font = new Font("Segoe UI", 12F, FontStyle.Bold);
             button4.ForeColor = Color.White;
@@ -92,6 +94,7 @@
             // button3
             // 
             button3.BackColor = Color.Khaki;
+            button3.FlatAppearance.BorderSize = 0;
             button3.FlatStyle = FlatStyle.Flat;
             button3.Font = new Font("Segoe UI", 12F, FontStyle.Bold);
             button3.ForeColor = Color.White;
@@ -106,6 +109,7 @@
             // button2
             // 
             button2.BackColor = Color.MediumSeaGreen;
+            button2.FlatAppearance.BorderSize = 0;
             button2.FlatStyle = FlatStyle.Flat;
             button2.Font = new Font("Segoe UI", 12F, FontStyle.Bold);
             button2.ForeColor = Color.White;
@@ -120,6 +124,7 @@
             // button1
             // 
             button1.BackColor = Color.Teal;
+            button1.FlatAppearance.BorderSize = 0;
             button1.FlatStyle = FlatStyle.Flat;
             button1.Font = new Font("Segoe UI", 12F, FontStyle.Bold);
             button1.ForeColor = Color.White;
@@ -131,37 +136,40 @@
             button1.UseVisualStyleBackColor = false;
             button1.Click += button1_Click;
             // 
-            // label2
-            // 
-            label2.AutoSize = true;
-            label2.BackColor = Color.Transparent;
-            label2.Font = new Font("Lucida Handwriting", 24F, FontStyle.Bold);
-            label2.ForeColor = Color.White;
-            label2.Location = new Point(223, 88);
-            label2.Name = "label2";
-            label2.Size = new Size(166, 41);
-            label2.TabIndex = 20;
-            label2.Text = "Cliente!";
-            // 
             // label1
             // 
             label1.AutoSize = true;
             label1.BackColor = Color.Transparent;
-            label1.Font = new Font("Lucida Handwriting", 24F, FontStyle.Bold);
+            label1.Font = new Font("Microsoft Sans Serif", 24F, FontStyle.Bold);
             label1.ForeColor = Color.White;
-            label1.Location = new Point(196, 36);
+            label1.Location = new Point(128, 72);
             label1.Name = "label1";
-            label1.Size = new Size(219, 41);
+            label1.Size = new Size(304, 37);
             label1.TabIndex = 19;
-            label1.Text = "Bem vindo";
+            label1.Text = "Bem vindo, cliente!";
+            // 
+            // button6
+            // 
+            button6.BackColor = Color.Transparent;
+            button6.FlatAppearance.BorderSize = 0;
+            button6.FlatStyle = FlatStyle.Flat;
+            button6.Font = new Font("Segoe UI Historic", 15.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            button6.ForeColor = Color.White;
+            button6.Location = new Point(573, 2);
+            button6.Name = "button6";
+            button6.Size = new Size(33, 35);
+            button6.TabIndex = 20;
+            button6.Text = "↩";
+            button6.UseVisualStyleBackColor = false;
+            button6.Click += button6_Click;
             // 
             // Cliente
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackgroundImage = (Image)resources.GetObject("$this.BackgroundImage");
-            ClientSize = new Size(613, 439);
-            Controls.Add(label2);
+            ClientSize = new Size(611, 439);
+            Controls.Add(button6);
             Controls.Add(label1);
             Controls.Add(label3);
             Controls.Add(button5);
@@ -187,7 +195,7 @@
         private Button button3;
         private Button button2;
         private Button button1;
-        private Label label2;
         private Label label1;
+        private Button button6;
     }
 }

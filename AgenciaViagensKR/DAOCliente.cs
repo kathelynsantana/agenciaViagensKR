@@ -25,8 +25,8 @@ namespace AgenciaViagensKR
         //Variáveis de outras entidades
         Compras comp;
 
-        //Variáveis do Banco de Dados
-        public MySqlConnection conexao;
+        //Variáveis e Vetores do Banco de Dados
+        public MySqlConnection conexao;//Criando a variável que representa a entidade do banco de dados
         public int[] codigo;
         public string[] nome;
         public long[] cpf;
@@ -54,6 +54,8 @@ namespace AgenciaViagensKR
         }//Fim da conexão com o Banco de Dados
 
 
+        //---------------------------------------------------------------------------------------------------
+        //Métodos
         //Cadastrar
         public void cadastrarCliente(string nome, long cpf, DateTime dataNascimento, string email, string senha, string telefone, string historico)
         {
@@ -76,6 +78,8 @@ namespace AgenciaViagensKR
             }//Fim do try_catch
         }//Fim do Cadastrar
 
+        //Validar CPF
+
         //Consultar
             //Consultar por Código do Cliente
             public string consultarCodigo(int codigo)
@@ -87,14 +91,14 @@ namespace AgenciaViagensKR
                     //Verificando o código...
                     if (this.codigo[i] == codigo)
                     {
-                        this.msg = $"\nCódigo:              {this.codigo[i]} "        +
-                                    $"\nNome:               {this.nome[i]} "          +
-                                    $"\nCPF:                {this.cpf[i]}"            +
-                                    $"\nData de Nascimento: {this.dataNascimento[i]}" +
-                                    $"\nE-mail:             {this.email[i]}"          +
-                                    $"\nSenha:              {this.senha[i]}"          +
-                                    $"\nTelefone:           {this.telefone[i]}"       +
-                                    $"\nHistorico:          {this.historico[i]}";
+                        this.msg = $"\nCódigo:             {this.codigo[i]} "        +
+                                   $"\nNome:               {this.nome[i]} "          +
+                                   $"\nCPF:                {this.cpf[i]}"            +
+                                   $"\nData de Nascimento: {this.dataNascimento[i]}" +
+                                   $"\nE-mail:             {this.email[i]}"          +
+                                   $"\nSenha:              {this.senha[i]}"          +
+                                   $"\nTelefone:           {this.telefone[i]}"       +
+                                   $"\nHistorico:          {this.historico[i]}";
                         return this.msg;
                     }//Fim do if              
                 }//Fim do for
@@ -106,7 +110,8 @@ namespace AgenciaViagensKR
             //Consultar por Nome
             public string consultarNome(int codigo)
             {
-                preencherVetor();//Preencher todos os dados do vetor
+                //Preenchendo todos os dados do vetor...
+                preencherVetor();
 
                 for (i = 0; i < this.contar; i++)
                 {
@@ -162,6 +167,9 @@ namespace AgenciaViagensKR
             //Consultar E-mail
             public string consultarEmail(int codigo)
             {
+                //Preenchendo todos os dados do vetor...
+                preencherVetor();
+
                 for (int i = 0; i < this.contar; i++)
                 {
                     //Verificando o código...
@@ -217,7 +225,9 @@ namespace AgenciaViagensKR
         //Login
         public void validarLoginCliente(string email, string senha)
         {
+            //Preenchendo todos os dados do vetor...
             preencherVetor();
+
             for(i = 0; i < this.contar; i++)
             {
                 if ((this.email[i] == email) && (this.senha[i] == senha))
@@ -229,19 +239,13 @@ namespace AgenciaViagensKR
                     //Redirecionando para a Área de Compras...
                     comp = new Compras();
                     comp.ShowDialog();
-                    break;
-                }
-                else
-                {
-                    if ((this.email[i] != email) || (this.senha[i] != senha))
-                    {
-                        //Se o e-mail ou a senha não forem encontrados...
-                        MessageBox.Show("E-mail ou senha incorretos!");
+                    return;//Encerrando o processo de login
 
-                    }//Fim do if
-
-                }//Fim do if_else
+                }//Fim do if
             }//Fim do for
+
+            //Se o e-mail ou a senha não forem encontrados...
+            MessageBox.Show("E-mail ou senha incorretos!");
         }//Fim do Login
 
         //Atualizar
@@ -250,7 +254,7 @@ namespace AgenciaViagensKR
             try
             {
                 //Configurando a atualização...
-                string query = $"update cliente set {campo} = '{novoDado}' where codigo = '{codigo}'";
+                string query = $"update cliente set '{campo}' = '{novoDado}' where codigo = '{codigo}'";
 
                 //Executando o comando de atualização...
                 MySqlCommand sql = new MySqlCommand(query, this.conexao);
@@ -334,7 +338,6 @@ namespace AgenciaViagensKR
                 this.nome[i]           = leitura["nome"] + "";
                 this.cpf[i]            = Convert.ToInt64(leitura["cpf"]);
                 this.email[i]          = leitura["email"] + "";
-                this.dataNascimento[i] = Convert.ToDateTime(leitura["dataNascimento"]);
                 this.senha[i]          = leitura["senha"] + "";
                 this.telefone[i]       = leitura["telefone"] + "";
                 this.historico[i]      = leitura["historico"] + "";

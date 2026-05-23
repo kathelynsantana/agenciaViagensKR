@@ -38,6 +38,7 @@
             button4 = new Button();
             button5 = new Button();
             label3 = new Label();
+            button6 = new Button();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
             // 
@@ -54,11 +55,11 @@
             // 
             label2.AutoSize = true;
             label2.BackColor = Color.Transparent;
-            label2.Font = new Font("Lucida Handwriting", 21.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label2.Font = new Font("Microsoft Sans Serif", 21.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label2.ForeColor = Color.White;
             label2.Location = new Point(132, 90);
             label2.Name = "label2";
-            label2.Size = new Size(347, 37);
+            label2.Size = new Size(285, 33);
             label2.TabIndex = 6;
             label2.Text = "Agente de Viagens!";
             // 
@@ -66,11 +67,11 @@
             // 
             label1.AutoSize = true;
             label1.BackColor = Color.Transparent;
-            label1.Font = new Font("Lucida Handwriting", 18F, FontStyle.Bold);
+            label1.Font = new Font("Microsoft Sans Serif", 18F, FontStyle.Bold);
             label1.ForeColor = Color.White;
             label1.Location = new Point(154, 49);
             label1.Name = "label1";
-            label1.Size = new Size(305, 31);
+            label1.Size = new Size(242, 29);
             label1.TabIndex = 5;
             label1.Text = "Bem vindo de volta,";
             // 
@@ -155,12 +156,28 @@
             label3.TabIndex = 12;
             label3.Text = "O que deseja fazer?";
             // 
+            // button6
+            // 
+            button6.BackColor = Color.Transparent;
+            button6.FlatAppearance.BorderSize = 0;
+            button6.FlatStyle = FlatStyle.Flat;
+            button6.Font = new Font("Segoe UI Historic", 15.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            button6.ForeColor = Color.White;
+            button6.Location = new Point(573, 0);
+            button6.Name = "button6";
+            button6.Size = new Size(33, 35);
+            button6.TabIndex = 21;
+            button6.Text = "↩";
+            button6.UseVisualStyleBackColor = false;
+            button6.Click += button6_Click;
+            // 
             // AgenteViagens
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackgroundImage = (Image)resources.GetObject("$this.BackgroundImage");
-            ClientSize = new Size(613, 439);
+            ClientSize = new Size(611, 439);
+            Controls.Add(button6);
             Controls.Add(label3);
             Controls.Add(button5);
             Controls.Add(button4);
@@ -189,5 +206,6 @@
         private Button button4;
         private Button button5;
         private Label label3;
+        private Button button6;
     }
 }

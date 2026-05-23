@@ -38,6 +38,7 @@
             pictureBox1 = new PictureBox();
             Slogan = new Label();
             label5 = new Label();
+            button6 = new Button();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
             // 
@@ -122,11 +123,11 @@
             // 
             Slogan.AutoSize = true;
             Slogan.BackColor = Color.Transparent;
-            Slogan.Font = new Font("Lucida Handwriting", 18F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            Slogan.Font = new Font("Microsoft Sans Serif", 18F, FontStyle.Bold, GraphicsUnit.Point, 0);
             Slogan.ForeColor = Color.White;
             Slogan.Location = new Point(53, 47);
             Slogan.Name = "Slogan";
-            Slogan.Size = new Size(448, 31);
+            Slogan.Size = new Size(361, 29);
             Slogan.TabIndex = 26;
             Slogan.Text = "Excluir um Agente de Viagens";
             // 
@@ -141,12 +142,28 @@
             label5.TabIndex = 27;
             label5.Text = "que deseja excluir.";
             // 
+            // button6
+            // 
+            button6.BackColor = Color.Transparent;
+            button6.FlatAppearance.BorderSize = 0;
+            button6.FlatStyle = FlatStyle.Flat;
+            button6.Font = new Font("Segoe UI Historic", 15.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            button6.ForeColor = Color.White;
+            button6.Location = new Point(523, -1);
+            button6.Name = "button6";
+            button6.Size = new Size(33, 35);
+            button6.TabIndex = 49;
+            button6.Text = "↩";
+            button6.UseVisualStyleBackColor = false;
+            button6.Click += button6_Click;
+            // 
             // ExcluirAge
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackgroundImage = (Image)resources.GetObject("$this.BackgroundImage");
-            ClientSize = new Size(554, 475);
+            ClientSize = new Size(560, 475);
+            Controls.Add(button6);
             Controls.Add(label5);
             Controls.Add(Slogan);
             Controls.Add(label4);
@@ -175,5 +192,6 @@
         private PictureBox pictureBox1;
         private Label Slogan;
         private Label label5;
+        private Button button6;
     }
 }

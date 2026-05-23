@@ -43,6 +43,7 @@
             Slogan = new Label();
             pictureBox1 = new PictureBox();
             label2 = new Label();
+            button6 = new Button();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
             // 
@@ -150,6 +151,7 @@
             // button1
             // 
             button1.BackColor = Color.Transparent;
+            button1.FlatAppearance.BorderSize = 0;
             button1.FlatStyle = FlatStyle.Flat;
             button1.Font = new Font("Segoe UI", 12F, FontStyle.Bold);
             button1.ForeColor = Color.White;
@@ -165,11 +167,11 @@
             // 
             Slogan.AutoSize = true;
             Slogan.BackColor = Color.Transparent;
-            Slogan.Font = new Font("Lucida Handwriting", 18F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            Slogan.Font = new Font("Microsoft Sans Serif", 18F, FontStyle.Bold, GraphicsUnit.Point, 0);
             Slogan.ForeColor = Color.White;
             Slogan.Location = new Point(32, 45);
             Slogan.Name = "Slogan";
-            Slogan.Size = new Size(488, 31);
+            Slogan.Size = new Size(382, 29);
             Slogan.TabIndex = 60;
             Slogan.Text = "Atualizar um Agente de Viagens";
             // 
@@ -194,12 +196,28 @@
             label2.TabIndex = 62;
             label2.Text = "que deseja atualizar os dados.";
             // 
+            // button6
+            // 
+            button6.BackColor = Color.Transparent;
+            button6.FlatAppearance.BorderSize = 0;
+            button6.FlatStyle = FlatStyle.Flat;
+            button6.Font = new Font("Segoe UI Historic", 15.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            button6.ForeColor = Color.White;
+            button6.Location = new Point(516, 0);
+            button6.Name = "button6";
+            button6.Size = new Size(33, 35);
+            button6.TabIndex = 63;
+            button6.Text = "↩";
+            button6.UseVisualStyleBackColor = false;
+            button6.Click += button6_Click;
+            // 
             // AtualizarAge
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackgroundImage = (Image)resources.GetObject("$this.BackgroundImage");
             ClientSize = new Size(554, 459);
+            Controls.Add(button6);
             Controls.Add(label2);
             Controls.Add(button1);
             Controls.Add(Slogan);
@@ -238,5 +256,6 @@
         private Label Slogan;
         private PictureBox pictureBox1;
         private Label label2;
+        private Button button6;
     }
 }

@@ -52,7 +52,15 @@ namespace AgenciaViagensKR
 
             //Chamando o método de validação de login...
             cliente.validarLoginCliente(maskedTextBox1.Text, maskedTextBox2.Text);
-             
+
         }//Fim do Botão de Login
+
+        //Botão de Voltar
+        private void button6_Click(object sender, EventArgs e)
+        {
+            //Fechar a aba...
+            this.Close();
+
+        }//Fim do Botão de Voltar
     }//Fim da Área de Login Cliente
 }//Fim do projeto

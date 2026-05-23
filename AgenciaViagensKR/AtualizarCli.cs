@@ -71,5 +71,13 @@ namespace AgenciaViagensKR
             maskedTextBox8.Text = "";
 
         }//Fim do Botão de Atualizar
+
+        //Botão de Voltar
+        private void button6_Click(object sender, EventArgs e)
+        {
+            //Fechando a aba...
+            this.Close();
+
+        }//Fim do Botão de Voltar
     }//Fim da Área de Atualizar Cliente
 }//Fim do projeto

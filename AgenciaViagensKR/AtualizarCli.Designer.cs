@@ -48,6 +48,7 @@
             maskedTextBox7 = new MaskedTextBox();
             maskedTextBox8 = new MaskedTextBox();
             maskedTextBox1 = new MaskedTextBox();
+            button6 = new Button();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
             // 
@@ -70,7 +71,7 @@
             pictureBox1.BackColor = Color.White;
             pictureBox1.Location = new Point(-5, 121);
             pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(567, 453);
+            pictureBox1.Size = new Size(567, 424);
             pictureBox1.TabIndex = 16;
             pictureBox1.TabStop = false;
             // 
@@ -180,11 +181,11 @@
             // 
             Slogan.AutoSize = true;
             Slogan.BackColor = Color.Transparent;
-            Slogan.Font = new Font("Lucida Handwriting", 24F, FontStyle.Bold);
+            Slogan.Font = new Font("Microsoft Sans Serif", 24F, FontStyle.Bold);
             Slogan.ForeColor = Color.White;
             Slogan.Location = new Point(64, 41);
             Slogan.Name = "Slogan";
-            Slogan.Size = new Size(424, 41);
+            Slogan.Size = new Size(324, 37);
             Slogan.TabIndex = 38;
             Slogan.Text = "Atualizar um Cliente";
             // 
@@ -248,12 +249,28 @@
             maskedTextBox1.Size = new Size(200, 23);
             maskedTextBox1.TabIndex = 47;
             // 
+            // button6
+            // 
+            button6.BackColor = Color.Transparent;
+            button6.FlatAppearance.BorderSize = 0;
+            button6.FlatStyle = FlatStyle.Flat;
+            button6.Font = new Font("Segoe UI Historic", 15.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            button6.ForeColor = Color.White;
+            button6.Location = new Point(516, -1);
+            button6.Name = "button6";
+            button6.Size = new Size(33, 35);
+            button6.TabIndex = 48;
+            button6.Text = "↩";
+            button6.UseVisualStyleBackColor = false;
+            button6.Click += button6_Click;
+            // 
             // AtualizarCli
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackgroundImage = (Image)resources.GetObject("$this.BackgroundImage");
-            ClientSize = new Size(554, 566);
+            ClientSize = new Size(554, 543);
+            Controls.Add(button6);
             Controls.Add(maskedTextBox1);
             Controls.Add(maskedTextBox8);
             Controls.Add(maskedTextBox7);
@@ -302,5 +319,6 @@
         private MaskedTextBox maskedTextBox7;
         private MaskedTextBox maskedTextBox8;
         private MaskedTextBox maskedTextBox1;
+        private Button button6;
     }
 }

@@ -80,5 +80,13 @@ namespace AgenciaViagensKR
             textBox4.Text = "";
 
         }//Fim do método de Limpar os Campos
+
+        //Botão de Voltar
+        private void button6_Click(object sender, EventArgs e)
+        {
+            //Fechando a aba...
+            this.Close();
+
+        }// Fim do Botão de Voltar
     }//Fim do Área de Cadastrar Agente de Viagens
 }//Fim do projeto

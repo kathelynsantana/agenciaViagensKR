@@ -46,6 +46,7 @@
             maskedTextBox2 = new MaskedTextBox();
             label6 = new Label();
             maskedTextBox3 = new MaskedTextBox();
+            button6 = new Button();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
             // 
@@ -53,11 +54,11 @@
             // 
             label8.AutoSize = true;
             label8.BackColor = Color.Transparent;
-            label8.Font = new Font("Lucida Handwriting", 24F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label8.Font = new Font("Microsoft Sans Serif", 24F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label8.ForeColor = Color.White;
             label8.Location = new Point(64, 42);
             label8.Name = "label8";
-            label8.Size = new Size(432, 41);
+            label8.Size = new Size(340, 37);
             label8.TabIndex = 41;
             label8.Text = "Cadastrar um Cliente";
             // 
@@ -228,12 +229,28 @@
             maskedTextBox3.Size = new Size(146, 23);
             maskedTextBox3.TabIndex = 51;
             // 
+            // button6
+            // 
+            button6.BackColor = Color.Transparent;
+            button6.FlatAppearance.BorderSize = 0;
+            button6.FlatStyle = FlatStyle.Flat;
+            button6.Font = new Font("Segoe UI Historic", 15.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            button6.ForeColor = Color.White;
+            button6.Location = new Point(517, 1);
+            button6.Name = "button6";
+            button6.Size = new Size(33, 35);
+            button6.TabIndex = 52;
+            button6.Text = "↩";
+            button6.UseVisualStyleBackColor = false;
+            button6.Click += button6_Click;
+            // 
             // CadastrarCli
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackgroundImage = (Image)resources.GetObject("$this.BackgroundImage");
             ClientSize = new Size(554, 486);
+            Controls.Add(button6);
             Controls.Add(maskedTextBox3);
             Controls.Add(label6);
             Controls.Add(maskedTextBox2);
@@ -279,5 +296,6 @@
         private MaskedTextBox maskedTextBox2;
         private Label label6;
         private MaskedTextBox maskedTextBox3;
+        private Button button6;
     }
 }
