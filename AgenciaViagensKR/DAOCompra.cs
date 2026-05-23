@@ -4,12 +4,20 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using MySql.Data.MySqlClient; //Importando os comandos de conexão com o banco
+using static Mysqlx.Expect.Open.Types.Condition.Types;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.ListView;
+
 
 namespace AgenciaViagensKR
 {
     //Entidade: Compra
     class DAOCompra
     {
+        //Variáveis de outras entidades
+        DAOAgente agente;
+        DAOCliente cliente;
+
         //Variáveis
         public string dados;
         public string comando;
@@ -72,13 +80,144 @@ namespace AgenciaViagensKR
         }//Fim do método Cadastrar
 
         //Consultar
+            //Consultar por Código
+            public string consultarCodigo(int codigo)
+            {
+                //Preenchendo todos os dados do vetor...
+                preencherVetor();
+                this.msg = "";
+
+                for (i = 0; i < this.contar; i++)
+                {
+                    //Verificando o código...
+                    if (this.codigo[i] == codigo)
+                    {
+                        this.msg = $"\nCódigo:                      {this.codigo[i]}"        +
+                                   $"\nData da compra:              {this.dataCompra [i]}"   +
+                                   $"\nTotal:                       {this.total[i]}"         +
+                                   $"\nDescrição:                   {this.descricao[i]}"     +
+                                   $"\nVenda:                       {this.venda[i]}"         +
+                                   $"\nCódigo do Cliente:           {this.codigoCliente[i]}" +
+                                   $"\nCódigo do Agente de Viagens: {this.codigoAgenteDeViagens[i]}";
+                        return this.msg;
+                    }//Fim do if
+                }//Fim do for
+
+                //Se o código não for encontrado...
+                return "O código informado não existe!";
+            }//Fim do método Consultar por Código
+
+            //Consultar Data da Compra
+            public string consultarDataCompra(int codigo)
+            {
+                //Preenchendo todos os dados do vetor...
+                preencherVetor();
+
+                for (i = 0; i < this.contar; i++)
+                {
+                    //Verificando o código...
+                    if (this.codigo[i] == codigo)
+                    {
+                        return "" + this.dataCompra[i];
+                    }//Fim do if              
+                }//Fim do for
+
+                //Se o código não for encontrado...
+                return "O código informado não existe!";
+            }//Fim do método Consultar Data da Compra
+
+            //Consultar Total da Compra
+            public string consultarTotal(int codigo)
+            {
+                //Preenchendo todos os dados do vetor...
+                preencherVetor();
+
+                for (i = 0; i < this.contar; i++)
+                {
+                    //Verificando o código...
+                    if (this.codigo[i] == codigo)
+                    {
+                        return "" + this.total[i];
+                    }//Fim do if              
+                }//Fim do for
+
+                //Se o código não for encontrado...
+                return "O código informado não existe!";
+            }//Fim do Consultar Total da Compra
+
+            //Consultar Descrição
+            public string consultarDescricao(int codigo)
+            {
+                //Preenchendo todos os dados do vetor...
+                preencherVetor();
+
+                for (i = 0; i < this.contar; i++)
+                {
+                    //Verificando o código...
+                    if (this.codigo[i] == codigo)
+                    {
+                        return this.descricao[i];
+                    }//Fim do if              
+                }//Fim do for
+
+                //Se o código não for encontrado...
+                return "O código informado não existe!";
+            }//Fim do Consultar Descrição
+
+            //Consultar Venda
+            public string consultarVenda(int codigo)
+            {
+                //Preenchendo todos os dados do vetor...
+                preencherVetor();
+
+                for (i = 0; i < this.contar; i++)
+                {
+                    //Verificando o código...
+                    if (this.codigo[i] == codigo)
+                    {
+                        return this.venda[i];
+                    }//Fim do if              
+                }//Fim do for
+
+                //Se o código não for encontrado...
+                return "O código informado não existe!";
+            }//Fim do Consultar Venda
+
+            //Consultar Código do Cliente
+            public string consultarCodigoCliente(int codigo)
+            {
+                //Preenchendo todos os dados do vetor...
+                preencherVetor();
+
+                //Conectando a Entidade Cliente...
+                DAOCliente cliente = new DAOCliente();
+
+                //Verificando o código com o método de verificação...
+                return cliente.consultarCodigo(codigo);
+
+            }//Fim do Consultar Código do Cliente
+
+            //Cosnultar Código do Agente de Viagens
+            public string consultarCodigoAgenteViagens(int codigo)
+            {
+                //Preenchendo todos os dados do vetor...
+                preencherVetor();
+
+                //Conectando a Entidade Agente de Viagens...
+                DAOAgente agente = new DAOAgente();
+
+                //Verificando o código com o método de verificação...
+                return agente.consultarCodigo(codigo);
+
+            }//Fim do Consultar Código do Cliente
+
         //Atualizar
         public string atualizarCompra(int codigo, string campo, string novoDado)
         {
             try
             {
                 //Configurando a atualização...
-                string query = $"update compra set '{campo}' = '{novoDado}' where codigo = '{codigo}'";
+                string query = $"update compra set {campo} = '{novoDado}' where codigo = '{codigo}'";
 
                 //Executando o comando de atualização...
                 MySqlCommand sql = new MySqlCommand(query, this.conexao);

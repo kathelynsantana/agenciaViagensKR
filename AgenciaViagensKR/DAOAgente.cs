@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using MySql.Data.MySqlClient; //Importando os comandos de conexão com o banco
 using static Mysqlx.Expect.Open.Types.Condition.Types;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement.ListView;
 
@@ -75,12 +76,13 @@ namespace AgenciaViagensKR
         }//Fim do Cadastrar
 
         //Consultar
-        //Consultar por Código do Agente de Viagens
+            //Consultar por Código do Agente de Viagens
             public string consultarCodigo(int codigo)
             {
                 //Preenchendo todos os dados do vetor...
                 preencherVetor();
                 this.msg = "";
+
                 for (i = 0; i < this.contar; i++)
                 {
                     //Verificando o código...
@@ -187,6 +189,14 @@ namespace AgenciaViagensKR
         {
             try
             {
+                //Verificando se o código existe...
+                if (consultarCodigo(codigo) == "O código informado não existe!")
+                {
+                    //Se o código não for encontrado...
+                    return $"O agente de viagens não foi encontrado. Não foi possível realizar a atualização!";
+
+                }//Fim da verificação do código
+
                 //Configurando a atualização...
                 string query = $"update agenteDeViagens set {campo} = '{novoDado}' where codigo = '{codigo}'";
 
@@ -208,6 +218,14 @@ namespace AgenciaViagensKR
         {
             try
             {
+                //Verificando se o código existe...
+                if (consultarCodigo(codigo) == "O código informado não existe!")
+                {
+                    //Se o código não for encontrado...
+                    return $"O agente de viagens não foi encontrado. Não foi possível realizar a exclusão!";
+
+                }//Fim da verificação do código
+
                 //Configurando o excluir...
                 string query = $"delete from agenteDeViagens where codigo = '{codigo}'";
 

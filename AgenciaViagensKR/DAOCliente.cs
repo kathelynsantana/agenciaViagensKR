@@ -84,8 +84,10 @@ namespace AgenciaViagensKR
             //Consultar por Código do Cliente
             public string consultarCodigo(int codigo)
             {
-                preencherVetor();//Preencher todos os dados do vetor
+                //Preenchendo todos os dados do vetor...
+                preencherVetor();
                 this.msg = "";
+
                 for (i = 0; i < this.contar; i++)
                 {
                     //Verificando o código...
@@ -253,8 +255,16 @@ namespace AgenciaViagensKR
         {
             try
             {
+                //Verificando se o código existe...
+                if (consultarCodigo(codigo) == "O código informado não existe!")
+                {
+                    //Se o código não for encontrado...
+                    return $"O cliente não foi encontrado. Não foi possível realizar a atualização!";
+
+                }//Fim da verificação do código
+
                 //Configurando a atualização...
-                string query = $"update cliente set '{campo}' = '{novoDado}' where codigo = '{codigo}'";
+                string query = $"update cliente set {campo} = '{novoDado}' where codigo = '{codigo}'";
 
                 //Executando o comando de atualização...
                 MySqlCommand sql = new MySqlCommand(query, this.conexao);
@@ -274,6 +284,14 @@ namespace AgenciaViagensKR
         {
             try
             {
+                //Verificando se o código existe...
+                if (consultarCodigo(codigo) == "O código informado não existe!")
+                {
+                    //Se o código não for encontrado...
+                    return $"O cliente não foi encontrado. Não foi possível realizar a exclusão!";
+
+                }//Fim da verificação do código
+
                 //Configurando o excluir...
                 string query = $"delete from cliente where codigo = '{codigo}'";
 

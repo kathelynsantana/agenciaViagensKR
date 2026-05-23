@@ -39,8 +39,20 @@ namespace AgenciaViagensKR
             }
             else
             {
-                //Executando a exclusão...
+                //Variáveis locais
                 int codigo = Convert.ToInt32(maskedTextBox1.Text);
+                string verificacao = this.cliente.consultarCodigo(codigo);
+
+                //Verificando se o código existe...
+                if (verificacao == "O código informado não existe!")
+                {
+                    //Se não existir...
+                    MessageBox.Show($"O cliente não foi encontrado. Não foi possível realizar a exclusão!");
+                    return;
+
+                }//Fim da verificação do código
+
+                //Executando a exclusão...
                 string excluido = this.cliente.excluirCliente(codigo);
                 MessageBox.Show(excluido);//Exibindo a mensagem de exclusão do método
                 maskedTextBox1.Text = "";//Limpando o campo do código

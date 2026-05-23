@@ -4,6 +4,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using MySql.Data.MySqlClient; //Importando os comandos de conexão com o banco
+using static Mysqlx.Expect.Open.Types.Condition.Types;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.ListView;
 
 namespace AgenciaViagensKR
 {

@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("AgenciaViagensKR")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+dea25640ba053537764aefc0814ef3ceccf12dd7")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+a392b1ac475f2e5ab30e64091e158f62424222cf")]
 [assembly: System.Reflection.AssemblyProductAttribute("AgenciaViagensKR")]
 [assembly: System.Reflection.AssemblyTitleAttribute("AgenciaViagensKR")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

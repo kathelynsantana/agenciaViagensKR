@@ -27,8 +27,18 @@ namespace AgenciaViagensKR
         //Botão de Atualizar
         private void button1_Click(object sender, EventArgs e)
         {
-            //Variável local
+            //Variáveis locais
             int codigo = Convert.ToInt32(maskedTextBox1.Text);
+            string verificacao = this.agente.consultarCodigo(codigo);
+
+            //Verificando se o código existe 
+            if (verificacao == "O código informado não existe!")
+            {
+                //Se não existir...
+                MessageBox.Show($"O agente de viagens não foi encontrado. Não foi possível realizar a atualização!");
+                return;
+
+            }//Fim da verificação do código 
 
             //Atualizando...
             this.agente.atualizarAgente(codigo, "nome", maskedTextBox2.Text);
