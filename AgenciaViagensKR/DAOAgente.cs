@@ -1,10 +1,10 @@
-﻿using MySql.Data.MySqlClient;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using MySql.Data.MySqlClient; //Importando os comandos de conexão com o banco
+using System.Windows.Forms;//Importando a estrutura de telas
 using static Mysqlx.Expect.Open.Types.Condition.Types;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement.ListView;
 
@@ -203,12 +203,12 @@ namespace AgenciaViagensKR
                 //Executando o comando de atualização...
                 MySqlCommand sql = new MySqlCommand(query, this.conexao);
                 string resultado = "" + sql.ExecuteNonQuery();//Executando o comando
-                return $"Os dados foram atualizados com sucesso!\n{resultado}";
+                return $"Os dados do agente de viagens foram atualizados com sucesso!\n{resultado}";
             }
             catch (Exception erro)
             {
                 //Erro na atualização
-                return $"Erro! Algo deu errado na atualização!\n\n{erro}";
+                return $"Erro! Algo deu errado na atualização dos dados do agente de viagens!\n\n{erro}";
 
             }//Fim do try_catch
         }//Fim do Atualizar

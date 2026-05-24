@@ -1,10 +1,10 @@
-﻿using MySql.Data.MySqlClient;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using MySql.Data.MySqlClient; //Importando os comandos de conexão com o banco
+using System.Windows.Forms;//Importando a estrutura de telas
 using static Mysqlx.Expect.Open.Types.Condition.Types;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement.ListView;
 
@@ -63,13 +63,13 @@ namespace AgenciaViagensKR
                 //Inserindo e executando o comando no banco de dados...
                 MySqlCommand sql = new MySqlCommand(this.comando, this.conexao);
                 string resultado = "" + sql.ExecuteNonQuery();//Executando o comando
-                Console.WriteLine($"Os dados do pacote de viagens foram inseridos com sucesso!\n{resultado}");
-                Console.WriteLine("O cadastro foi concluído!\n\n");
+                MessageBox.Show($"Os dados do pacote de viagens foram inseridos com sucesso!\n{resultado}");
+                MessageBox.Show("O cadastro foi concluído!\n\n");
             }
             catch(Exception erro)
             {
                 //Erro no cadastro
-                Console.WriteLine("Erro, algo falhou na inserção de dados e no cadastro!");
+                MessageBox.Show("Erro, algo falhou na inserção de dados e no cadastro!" + erro);
 
             }//Fim do try_catch
         }//Fim do Cadastrar
@@ -107,7 +107,7 @@ namespace AgenciaViagensKR
                 //Preenchendo todos os dados do vetor...
                 preencherVetor();
 
-                for (int i = 0; i < this.contar; i++)
+                for (i = 0; i < this.contar; i++)
                 {
                     //Verificando o código...
                     if (this.codigo[i] == codigo)
@@ -123,7 +123,10 @@ namespace AgenciaViagensKR
             //Consultar Valor
             public string consultarValor(int codigo)
             {
-                for (int i = 0; i < this.contar; i++)
+                //Preenchendo todos os dados do vetor...
+                preencherVetor();
+
+                for (i = 0; i < this.contar; i++)
                 {
                     //Verificando o código...
                     if (this.codigo[i] == codigo)
@@ -198,18 +201,26 @@ namespace AgenciaViagensKR
         {
             try
             {
+                //Verificando se o código existe...
+                if (consultarCodigo(codigo) == "O código informado não existe!")
+                {
+                    //Se o código não for encontrado...
+                    return $"O pacote de viagens não foi encontrado. Não foi possível realizar a atualização!";
+
+                }//Fim da verificação do código
+
                 //Configurando a atualização...
                 string query = $"update pacote set {campo} = '{novoDado}' where codigo = '{codigo}'";
 
                 //Executando o comando de atualização...
                 MySqlCommand sql = new MySqlCommand(query, this.conexao);
                 string resultado = "" + sql.ExecuteNonQuery();//Executando o comando
-                return "Os dados foram atualizados com sucesso!";
+                return "Os dados do pacote de viagens foram atualizados com sucesso!";
             }
             catch(Exception erro)
             {
                 //Erro na atualização
-                return "Erro! Algo deu errado na atualização!";
+                return $"Erro! Algo deu errado na atualização dos dados do pacote de viagens!\n\n{erro}";
 
             }//Fim do try_catch
         }//Fim do Atualizar
@@ -219,6 +230,14 @@ namespace AgenciaViagensKR
         {
             try
             {
+                //Verificando se o código existe...
+                if (consultarCodigo(codigo) == "O código informado não existe!")
+                {
+                    //Se o código não for encontrado...
+                    return $"O pacote de viagens não foi encontrado. Não foi possível realizar a exclusão!";
+
+                }//Fim da verificação do código
+
                 //Configurando a exclusão...
                 string query = $"delete from pacote where codigo = '{codigo}'";
 
@@ -230,7 +249,7 @@ namespace AgenciaViagensKR
             catch (Exception erro)
             {
                 //Erro na exclusão
-                return "Erro! Algo deu errado na exclusão!";
+                return $"Erro! Algo deu errado na exclusão!\n\n{erro}";
 
             }//Fim do try_catch
         }//Fim do Excluir

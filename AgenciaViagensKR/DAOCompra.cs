@@ -1,10 +1,10 @@
-﻿using MySql.Data.MySqlClient;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using MySql.Data.MySqlClient; //Importando os comandos de conexão com o banco
+using System.Windows.Forms;//Importando a estrutura de telas
 using static Mysqlx.Expect.Open.Types.Condition.Types;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement.ListView;
 
@@ -14,10 +14,6 @@ namespace AgenciaViagensKR
     //Entidade: Compra
     class DAOCompra
     {
-        //Variáveis de outras entidades
-        DAOAgente agente;
-        DAOCliente cliente;
-
         //Variáveis
         public string dados;
         public string comando;
@@ -69,7 +65,7 @@ namespace AgenciaViagensKR
                 //Inserindo e executando o comando no banco de dados...
                 MySqlCommand sql = new MySqlCommand(this.comando, this.conexao);
                 string resultado = "" + sql.ExecuteNonQuery();//Executando o comando
-                MessageBox.Show($"Os dados do cliente foram inseridos com sucesso!\n{resultado}");
+                MessageBox.Show($"Os dados da compra foram inseridos com sucesso!\n{resultado}");
                 MessageBox.Show("O cadastro foi concluído!\n\n");
             }
             catch (Exception erro)
@@ -197,7 +193,7 @@ namespace AgenciaViagensKR
 
             }//Fim do Consultar Código do Cliente
 
-            //Cosnultar Código do Agente de Viagens
+            //Consultar Código do Agente de Viagens
             public string consultarCodigoAgenteViagens(int codigo)
             {
                 //Preenchendo todos os dados do vetor...
@@ -216,13 +212,21 @@ namespace AgenciaViagensKR
         {
             try
             {
+                //Verificando se o código existe...
+                if (consultarCodigo(codigo) == "O código informado não existe!")
+                {
+                    //Se o código não for encontrado...
+                    return $"A compra não foi encontrado. Não foi possível realizar a atualização!";
+
+                }//Fim da verificação do código
+
                 //Configurando a atualização...
                 string query = $"update compra set {campo} = '{novoDado}' where codigo = '{codigo}'";
 
                 //Executando o comando de atualização...
                 MySqlCommand sql = new MySqlCommand(query, this.conexao);
                 string resultado = "" + sql.ExecuteNonQuery();//Executando o comando
-                return $"Os dados foram atualizados com sucesso!\n{resultado}";
+                return $"Os dados da compra foram atualizados com sucesso!\n{resultado}";
             }
             catch (Exception erro)
             {
@@ -237,6 +241,14 @@ namespace AgenciaViagensKR
         {
             try
             {
+                //Verificando se o código existe...
+                if (consultarCodigo(codigo) == "O código informado não existe!")
+                {
+                    //Se o código não for encontrado...
+                    return $"A compra não foi encontrada. Não foi possível realizar a exclusão!";
+
+                }//Fim da verificação do código
+
                 //Configurando o excluir...
                 string query = $"delete from compra where codigo = '{codigo}'";
 

@@ -46,6 +46,7 @@
             maskedTextBox2 = new MaskedTextBox();
             label6 = new Label();
             maskedTextBox3 = new MaskedTextBox();
+            button2 = new Button();
             button6 = new Button();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
@@ -229,6 +230,21 @@
             maskedTextBox3.Size = new Size(146, 23);
             maskedTextBox3.TabIndex = 51;
             // 
+            // button2
+            // 
+            button2.BackColor = Color.Transparent;
+            button2.FlatAppearance.BorderSize = 0;
+            button2.FlatStyle = FlatStyle.Flat;
+            button2.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
+            button2.ForeColor = Color.White;
+            button2.Location = new Point(394, 190);
+            button2.Name = "button2";
+            button2.Size = new Size(75, 23);
+            button2.TabIndex = 53;
+            button2.Text = "Validar";
+            button2.UseVisualStyleBackColor = false;
+            button2.Click += button2_Click;
+            // 
             // button6
             // 
             button6.BackColor = Color.Transparent;
@@ -236,10 +252,10 @@
             button6.FlatStyle = FlatStyle.Flat;
             button6.Font = new Font("Segoe UI Historic", 15.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
             button6.ForeColor = Color.White;
-            button6.Location = new Point(517, 1);
+            button6.Location = new Point(517, 0);
             button6.Name = "button6";
             button6.Size = new Size(33, 35);
-            button6.TabIndex = 52;
+            button6.TabIndex = 54;
             button6.Text = "↩";
             button6.UseVisualStyleBackColor = false;
             button6.Click += button6_Click;
@@ -251,6 +267,7 @@
             BackgroundImage = (Image)resources.GetObject("$this.BackgroundImage");
             ClientSize = new Size(554, 486);
             Controls.Add(button6);
+            Controls.Add(button2);
             Controls.Add(maskedTextBox3);
             Controls.Add(label6);
             Controls.Add(maskedTextBox2);
@@ -296,6 +313,7 @@
         private MaskedTextBox maskedTextBox2;
         private Label label6;
         private MaskedTextBox maskedTextBox3;
+        private Button button2;
         private Button button6;
     }
 }

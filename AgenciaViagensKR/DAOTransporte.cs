@@ -1,10 +1,10 @@
-﻿using MySql.Data.MySqlClient;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using MySql.Data.MySqlClient; //Importando os comandos de conexão com o banco
+using System.Windows.Forms;//Importando a estrutura de telas
 using static Mysqlx.Expect.Open.Types.Condition.Types;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement.ListView;
 
@@ -62,13 +62,13 @@ namespace AgenciaViagensKR
                 //Inserindo e executando o comando no banco de dados...
                 MySqlCommand sql = new MySqlCommand(this.comando, this.conexao);
                 string resultado = "" + sql.ExecuteNonQuery();//Executando o comando
-                Console.WriteLine($"Os dados do transporte foram inseridos com sucesso!\n{resultado}");
-                Console.WriteLine("O cadastro foi concluído com sucesso!");
+                MessageBox.Show($"Os dados do transporte foram inseridos com sucesso!\n{resultado}");
+                MessageBox.Show("O cadastro foi concluído com sucesso!");
             }
             catch (Exception erro)
             {
                 //Erro no cadastro
-                Console.WriteLine("Erro! Algo falhou na inserção de dados e no cadastro!");
+                MessageBox.Show("Erro! Algo falhou na inserção de dados e no cadastro!" + erro);
             }//Fim do try_catch
         }//Fim do Cadastrar
 
@@ -179,18 +179,26 @@ namespace AgenciaViagensKR
         {
             try
             {
+                //Verificando se o código existe...
+                if (consultarCodigo(codigo) == "O código informado não existe!")
+                {
+                    //Se o código não for encontrado...
+                    return $"O transporte não foi encontrado. Não foi possível realizar a atualização!";
+
+                }//Fim da verificação do código
+
                 //Configurando a atualização...
                 string query = $"update transporte set {campo} = '{novoDado}' where codigo = '{codigo}'";
 
                 //Executando o comando de atualização...
                 MySqlCommand sql = new MySqlCommand(query, this.conexao);
                 string resultado = "" + sql.ExecuteNonQuery();//Executando o comando
-                return "Os dados foram atualizados com sucesso!";
+                return "Os dados do transporte foram atualizados com sucesso!";
             }
             catch(Exception erro)
             {
                 //Erro na atualização
-                return "Erro! Algo deu errado na atualização!";
+                return $"Erro! Algo deu errado na atualização!\n\n{erro}";
             }//Fim do try_catch
         }//Fim do Atualizar
         
@@ -199,6 +207,14 @@ namespace AgenciaViagensKR
         {
             try
             {
+                //Verificando se o código existe...
+                if (consultarCodigo(codigo) == "O código informado não existe!")
+                {
+                    //Se o código não for encontrado...
+                    return $"O transporte não foi encontrado. Não foi possível realizar a exclusão!";
+
+                }//Fim da verificação do código
+
                 //Configurando o excluir...
                 string query = $"delete from transporte where codigo = '{codigo}'";
 
@@ -210,8 +226,7 @@ namespace AgenciaViagensKR
             catch (Exception erro)
             {
                 //Erro na exclusão
-
-                return "Erro! Algo deu errado na exclusão!";
+                return $"Erro! Algo deu errado na exclusão!\n\n{erro}";
             }//Fim do try_catch
         }//Fim do Excluir
 

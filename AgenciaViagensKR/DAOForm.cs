@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using MySql.Data.MySqlClient; //Importando os comandos de conexão com o banco
+using System.Windows.Forms;//Importando a estrutura de telas
 
 namespace AgenciaViagensKR
 {

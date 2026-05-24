@@ -1,10 +1,10 @@
-﻿using MySql.Data.MySqlClient;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using MySql.Data.MySqlClient; //Importando os comandos de conexão com o banco
+using System.Windows.Forms;//Importando a estrutura de telas
 using static Mysqlx.Expect.Open.Types.Condition.Types;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement.ListView;
 
@@ -78,7 +78,115 @@ namespace AgenciaViagensKR
             }//Fim do try_catch
         }//Fim do Cadastrar
 
-        //Validar CPF
+        //Validação do CPF
+        public void validarCpf(long cpf)
+        {
+            //Convertendo o CPF para string...
+            string cpfString = cpf.ToString();
+
+            //Verificando se o CPF tem 11 dígitos..
+            if (cpfString.Length != 11)
+            {
+                //Se o CPF não tiver 11 dígitos...
+                MessageBox.Show("Erro! CPF Inválido!");
+            }
+            else
+            {
+                //Variáveis
+                int soma1 = 0;//Variável que vai guardar o resultado de cada soma
+
+                //Lendo os 9 primeiros dígitos...
+                for (int i = 0; i < 9; i++)
+                {
+                    //Variável que vai ler dígito por dígito
+                    char caractere = cpfString[i];
+
+                    //Convertendo caractere para string e depois para int...
+                    string stringDigito = caractere.ToString();
+                    int digito = Convert.ToInt32(stringDigito);
+
+                    //Calculando...
+                    int multiplicador = 10 - i; //Vai passar por cada posição (ex: i x 10, i x 9 = digito x 10, digito x 9...)
+                    soma1 = soma1 + (digito * multiplicador);
+
+                }//Fim do for
+    
+                //Variáveis
+                int resultado = soma1 % 11;
+                int primeiroDigito;
+
+                //Verificando o resultado da soma...
+                if (resultado < 2)
+                {
+                    primeiroDigito = 0;
+                }
+                else
+                {
+                    primeiroDigito = 11 - resultado;
+
+                }//Fim do if_else
+
+                //Comparando com o 10º dígito do CPF (posição 9)
+                int decimoDigito = Convert.ToInt32(cpfString[9].ToString());
+
+                if (primeiroDigito != decimoDigito)
+                {
+                    //Se forem diferentes...
+                    MessageBox.Show("Erro! CPF Inválido!");
+                    return;//Sai do método
+
+                }//Fim do if
+                //-------- Fim do Cálculo do primeiro dígito verificador (10° dígito) --------
+
+                int soma2 = 0;
+
+                //Lendo os 10 primeiros dígitos...
+                for (int i = 0; i < 10; i++)
+                {
+                    //Variável que vai ler dígito por dígito
+                    char caractere = cpfString[i];
+
+                    //Convertendo caractere para string e depois para int...
+                    string stringDigito = caractere.ToString();
+                    int digito = Convert.ToInt32(stringDigito);
+
+                    //Calculando...
+                    int multiplicador = 11 - i; //Vai passar por cada posição (ex: i x 10, i x 9 = digito x 10, digito x 9...)
+                    soma2 = soma2 + (digito * multiplicador);
+
+                }//Fim do for
+
+                //Variáveis
+                int resultado2 = soma2 % 11;
+                int segundoDigito;
+
+                //Verificando o resultado da soma...
+                if (resultado2 < 2)
+                {
+                    segundoDigito = 0;
+                }
+                else
+                {
+                    segundoDigito = 11 - resultado2;
+                }//Fim do if_else
+
+                //Comparando com o 11º dígito do CPF (posição 10)
+                int decimoPrimeiroDigito = Convert.ToInt32(cpfString[10].ToString());
+
+                if (segundoDigito != decimoPrimeiroDigito)
+                {
+                    //Se forem diferentes...
+                    MessageBox.Show("Erro! CPF Inválido!");
+                }
+                else
+                {
+                    //Se forem iguais...
+                    MessageBox.Show("CPF Válido!");
+
+                }//Fim do if_else
+
+            }//Fim da verificação
+        }//Fim da Validação do CPF
 
         //Consultar
             //Consultar por Código do Cliente
@@ -269,12 +377,12 @@ namespace AgenciaViagensKR
                 //Executando o comando de atualização...
                 MySqlCommand sql = new MySqlCommand(query, this.conexao);
                 string resultado = "" + sql.ExecuteNonQuery();//Executando o comando
-                return $"Os dados foram atualizados com sucesso!\n{resultado}";
+                return $"Os dados do cliente foram atualizados com sucesso!\n{resultado}";
             }
             catch(Exception erro)
             {
                 //Erro na atualização
-                return $"Erro! Algo deu errado na atualização!\n\n{erro}";
+                return $"Erro! Algo deu errado na atualização dos dados do cliente!\n\n{erro}";
 
             }//Fim do try_catch
         }//Fim do Atualizar
@@ -355,6 +463,7 @@ namespace AgenciaViagensKR
                 this.codigo[i]         = Convert.ToInt32(leitura["codigo"]);
                 this.nome[i]           = leitura["nome"] + "";
                 this.cpf[i]            = Convert.ToInt64(leitura["cpf"]);
+                this.dataNascimento[i] = Convert.ToDateTime(leitura["dataNascimento"]);
                 this.email[i]          = leitura["email"] + "";
                 this.senha[i]          = leitura["senha"] + "";
                 this.telefone[i]       = leitura["telefone"] + "";

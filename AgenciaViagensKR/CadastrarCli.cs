@@ -72,7 +72,7 @@ namespace AgenciaViagensKR
             {
                 //Variáveis locais
                 string nome = textBox1.Text;
-                long cpf = Convert.ToInt64(maskedTextBox1.Text.Replace(",", "").Replace("-", ""));//Trata os caracteres e remove eles
+                long cpf = Convert.ToInt64(maskedTextBox1.Text.Replace(",", "").Replace("-", ""));//Tratando os caracteres e removendo eles
                 string email = textBox2.Text;
                 string senha = textBox3.Text;
                 string telefone = maskedTextBox3.Text;
@@ -105,6 +105,20 @@ namespace AgenciaViagensKR
             textBox4.Text = "";
 
         }//Fim do método de Limpar os Campos
+
+        //Botão de Validação do CPF
+        private void button2_Click(object sender, EventArgs e)
+        {
+            //Variáveis
+            string cpfDigitado = maskedTextBox1.Text.Replace(",", "").Replace("-", "").Replace(".", "");//Tratando os caracteres e removendo eles
+
+            //Convertendo o CPF para long...
+            long cpf = Convert.ToInt64(cpfDigitado);
+
+            //Chamando o método de validação do CPF...
+            this.cliente.validarCpf(cpf);
+
+        }//Fim do Botão de Validação do CPF
 
         //Botão de Voltar
         private void button6_Click(object sender, EventArgs e)
