@@ -463,7 +463,6 @@ namespace AgenciaViagensKR
                 this.codigo[i]         = Convert.ToInt32(leitura["codigo"]);
                 this.nome[i]           = leitura["nome"] + "";
                 this.cpf[i]            = Convert.ToInt64(leitura["cpf"]);
-                this.dataNascimento[i] = Convert.ToDateTime(leitura["dataNascimento"]);
                 this.email[i]          = leitura["email"] + "";
                 this.senha[i]          = leitura["senha"] + "";
                 this.telefone[i]       = leitura["telefone"] + "";
