@@ -92,6 +92,7 @@ namespace AgenciaViagensKR
             }
             else
             {
+                //-------- Cálculo do primeiro dígito verificador (10° dígito) --------
                 //Variáveis
                 int soma1 = 0;//Variável que vai guardar o resultado de cada soma
 
@@ -138,6 +139,7 @@ namespace AgenciaViagensKR
                 }//Fim do if
                 //-------- Fim do Cálculo do primeiro dígito verificador (10° dígito) --------
 
+                //-------- Cálculo do segundo dígito verificador (11° dígito) --------
                 int soma2 = 0;
 
                 //Lendo os 10 primeiros dígitos...
@@ -183,6 +185,7 @@ namespace AgenciaViagensKR
                     //Se forem iguais...
                     MessageBox.Show("CPF Válido!");
 
+                //-------- Fim do Cálculo do segundo dígito verificador (11° dígito) --------
                 }//Fim do if_else
 
             }//Fim da verificação
